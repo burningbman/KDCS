@@ -1,0 +1,180 @@
+{
+  "env": {
+    "browser": true,
+    "amd": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2019
+  },
+
+  "rules": {
+    "class-methods-use-this": "warn",
+    "comma-dangle": [
+      "warn",
+      "never"
+    ],
+    "eol-last": "error",
+    "no-array-constructor": "error",
+    "no-caller": "error",
+    "no-implied-eval": "error",
+    "no-lone-blocks": "error",
+    "no-new-wrappers": "error",
+    "no-return-assign": "error",
+    "no-return-await": "error",
+    "no-template-curly-in-string": "warn",
+    "no-throw-literal": "error",
+    "no-unneeded-ternary": "error",
+    "prefer-promise-reject-errors": "error",
+    "wrap-iife": [
+      "error",
+      "any"
+    ],
+    "constructor-super": "error",
+    "for-direction": "error",
+    "no-case-declarations": "error",
+    "no-class-assign": "error",
+    "no-compare-neg-zero": "error",
+    "no-cond-assign": "error",
+    "no-const-assign": "error",
+    "no-delete-var": "error",
+    "no-dupe-args": "error",
+    "no-dupe-class-members": "error",
+    "no-dupe-keys": "error",
+    "no-duplicate-case": "error",
+    "no-empty-character-class": "error",
+    "no-empty-pattern": "error",
+    "no-eval": "error",
+    "no-ex-assign": "error",
+    "no-fallthrough": "error",
+    "no-func-assign": "error",
+    "no-inner-declarations": "error",
+    "no-invalid-regexp": "error",
+    "no-irregular-whitespace": "error",
+    "no-iterator": "error",
+    "no-new": "error",
+    "no-new-func": "error",
+    "no-new-object": "error",
+    "no-obj-calls": "error",
+    "no-octal": "error",
+    "no-octal-escape": "error",
+    "no-regex-spaces": "error",
+    "no-self-assign": "error",
+    "no-self-compare": "error",
+    "no-unmodified-loop-condition": "error",
+    "no-unsafe-finally": "error",
+    "no-unsafe-negation": "error",
+    "no-unused-labels": "error",
+    "no-useless-call": "error",
+    "no-with": "error",
+    "use-isnan": "error",
+    "valid-typeof": "error",
+    "eqeqeq": "warn",
+    "guard-for-in": "warn",
+    "no-alert": "warn",
+    "no-constant-condition": "warn",
+    "no-control-regex": "warn",
+    "no-debugger": "warn",
+    "no-else-return": "warn",
+    "no-empty": "warn",
+    "no-eq-null": "warn",
+    "no-extend-native": "warn",
+    "no-extra-bind": "warn",
+    "no-extra-boolean-cast": "warn",
+    "no-extra-label": "warn",
+    "no-extra-semi": "warn",
+    "no-global-assign": "warn",
+    "no-label-var": "warn",
+    "no-loop-func": "warn",
+    "no-undef": "warn",
+    "no-unreachable": "warn",
+    "no-unused-expressions": [
+      "warn",
+      {
+        "allowShortCircuit": true,
+        "allowTernary": true
+      }
+    ],
+    "no-unused-vars": [
+      "warn",
+      {
+        "args": "after-used"
+      }
+    ],
+    "no-useless-return": "warn",
+    "quote-props": [
+      "warn",
+      "as-needed",
+      {
+        "keywords": true,
+        "unnecessary": false
+      }
+    ],
+    "block-scoped-var": "warn",
+    "complexity": [
+      "warn",
+      30
+    ],
+    "max-len": [
+      "warn",
+      {
+        "code": 200,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreComments": true,
+        "ignoreRegExpLiterals": true
+      }
+    ],
+    "new-cap": [
+      "warn",
+      {
+        "properties": false
+      }
+    ],
+    "no-console": "warn",
+    "no-labels": "warn",
+    "no-redeclare": "warn",
+    "no-shadow": "warn",
+    "no-shadow-restricted-names": "warn",
+    "no-useless-escape": "warn",
+    "no-warning-comments": [
+      "warn",
+      {
+        "terms": [
+          "fixme"
+        ],
+        "location": "start"
+      }
+    ],
+    "object-shorthand": [
+      "warn",
+      "never"
+    ],
+    "semi": [
+      "warn",
+      "always"
+    ],
+    "valid-jsdoc": [
+      "warn",
+      {
+        "requireReturn": false,
+        "requireParamDescription": false,
+        "requireReturnDescription": false
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["**/*.tst/*.mweb/**/*.js"],
+      "env": {
+        "jasmine": true
+      },
+      "rules": {
+        "no-alert": "warn",
+        "no-compare-neg-zero": "warn",
+        "no-console": "off"
+      }
+    }
+  ]
+}
