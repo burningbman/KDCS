@@ -2,12 +2,15 @@
 
 // load methods defined in mafia
 const {
+    autosell,
+    availableAmount,
     cliExecute,
     setProperty,
     getProperty,
     visitUrl,
     print,
-    printHtml
+    printHtml,
+    wait
 } = require('kolmafia');
 
 const steps = {
@@ -34,7 +37,6 @@ const steps = {
 <br>
         Get pork gems and autosell<br>
         Visit meatsmith & accept quest<br>
-        Visit Toot Oriole & get pork gems<br>
         Do Clan consults<br>
         Then run 'kdcs postAscension'
         `);
@@ -49,9 +51,9 @@ const steps = {
         
         //get consults 
         cliExecute("fortune cwbot pizza batman thick");
-        cliExecute("wait 5"
+        wait(5);
         cliExecute("fortune cwbot pizza batman thick");
-        cliExecute("wait 5"
+         wait(5);
         cliExecute("fortune cwbot pizza batman thick");
         
         
@@ -65,13 +67,27 @@ const steps = {
 
         cliExecute("use 1 letter from King Ralph XI");
         cliExecute("use 1 pork elf goodies sack");
-
-        cliExecute("pull 1 snow suit");
+        
+        /* 
+        
+        // Need to figure out a way to count how many of each gem I have and sell them, do I need to pull code for $item from libram?
+        
+        autosell(availableAmount($item`hamethyst`);
+        autosell(availableAmount($item`baconstone`);
+        
+        // keep 2 porqouises if we have more
+        autosell(availableAmount($item`porquoise`)-2, $item`porqouise`);
+        
+        */
+        
+        // manual visit to fireworks shop to allow purchases
+        visitUrl('clan_viplounge.php?action=fwshop');    
 
         cliExecute("buy using storage 1 borrowed time");
         cliExecute("buy using storage 1 1952 Mickey Mantle card");
         cliExecute("buy using storage 1 non-Euclidean angle");
 
+        cliExecute("pull 1 snow suit");
         cliExecute("pull 1 borrowed time");
         cliExecute("pull 1 non-Euclidean angle");
         cliExecute("pull 1 1952 Mickey Mantle card");
@@ -99,7 +115,8 @@ const steps = {
         cliExecute("buy 1 glittery mascara");
         cliExecute("buy 1 dramatic range");
         cliExecute("use 1 dramatic range");
-        cliExecute("acquire 1 turtle totem");
+        cliExecute("acquire turtle totem");
+        cliExecute("acquire saucepan");
 
         printHtml(`
         /*
