@@ -41,10 +41,26 @@ const steps = {
     },
 
     postAscension: function() {
+        
+        // vote at the voting booth
         visitUrl("place.php?whichplace=town_right&action=townright_vote");
         visitUrl("choice.php?option=1&whichchoice=1331&g=2&local%5B%5D=2&local%5B%5D=3");
         visitUrl("place.php?whichplace=town_right&action=townright_vote");
+        
+        //get consults 
+        cliExecute("fortune cwbot pizza batman thick");
+        cliExecute("wait 5"
+        cliExecute("fortune cwbot pizza batman thick");
+        cliExecute("wait 5"
+        cliExecute("fortune cwbot pizza batman thick");
+        
+        
+        // accept meatsmith quest
+        visitUrl('shop.php?whichshop=meatsmith&action=talk');
+        runChoice(1);
 
+        // visit the toot oriole
+        visitUrl("tutorial.php?action=toot");
         visitUrl("tutorial.php?action=toot");
 
         cliExecute("use 1 letter from King Ralph XI");
