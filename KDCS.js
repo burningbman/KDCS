@@ -36,8 +36,6 @@ const steps = {
         -------------------------------<br>
 <br>
         Get pork gems and autosell<br>
-        Visit meatsmith & accept quest<br>
-        Do Clan consults<br>
         Then run 'kdcs postAscension'
         `);
     },
@@ -72,11 +70,14 @@ const steps = {
         
         // Need to figure out a way to count how many of each gem I have and sell them, do I need to pull code for $item from libram?
         
-        autosell(availableAmount($item`hamethyst`);
-        autosell(availableAmount($item`baconstone`);
+        autosell(availableAmount($item`hamethyst`), $item`hamethyst`);
+        autosell(availableAmount($item`baconstone`), $item`baconstone`);
         
         // keep 2 porqouises if we have more
-        autosell(availableAmount($item`porquoise`)-2, $item`porqouise`);
+        if availableAmount($item`porquoise`) > 1 {
+        cliExecute("Closet put 2 porquoise");
+        }
+        autosell(availableAmount($item`porquoise`), $item`porqouise`);
         
         */
         
@@ -120,9 +121,6 @@ const steps = {
 
         printHtml(`
         /*
-        // if need saucepan, acquire 1 saucepan<br>
-        // if need worthless x, acquire 1 worthless x<br>
-        <br>
         // Map Monster - Haunted Pantry - Possessed Can of Tomatoes  (Feel Envy, Chest X-Ray)<br>
         // Map Monster - Haunted Kitchen - Possessed Silverware Drawer (Feel Envy, Chest X-Ray)<br>
         // Map Monster - Skeleton Store – Novelty tropical skeleton<br>
@@ -138,10 +136,10 @@ const steps = {
         cliExecute("cast 1 advanced saucecrafting");
         cliExecute("cast 1 eye and a twist");
         cliExecute("maximize MP");
+        cliExecute("Council");
 
         printHtml(`
     /*<br>
-    // Visit Council, look at list<br>
     // Do Coil wire test<br>
     */<br>
    Then run 'kdcs buffs'`);
@@ -196,10 +194,10 @@ const steps = {
         cliExecute("swim laps");
 
         cliExecute("mood cs");
+        cliExecute("Bastille Myst");
 
         printHtml(`
     /*<br>
-    // Bastille - Draftsman, Myst, Bourgeoisie<br>
     // Daycare - scavenge<br>
     // Cook Pizza :<br>
     // - Magical Ice Cubes<br>
@@ -235,7 +233,7 @@ const steps = {
     // pick mushroom<br>
     // Go to NEP<br>
     // Reject quest<br>
-    // Try and cast Feel Prides as late as possible, and make sure Familiar Scrapbook is equipped<br>
+    // Try and cast Feel Prides as late as possible, and make sure Familiar Scrapbook is equipped when you do<br>
     */<br>
    Then run 'kdcs mox'`);
     },
@@ -354,10 +352,7 @@ Then run 'kdcs weaponStart'`);
     },
 
     weaponEnd: function() {
-        // if no disco mask:
         cliExecute("acquire 1 disco mask");
-
-
         cliExecute("maximize weapon damage");
         cliExecute("boombox fists");
         cliExecute("use 1 corrupted marrow");
@@ -418,6 +413,7 @@ Then run 'kdcs weaponStart'`);
     },
 
     itemMid: function() {
+        cliExecute("use 1 cyclops eyedrops");
         cliExecute("equip vampyric cloake");
         cliExecute("equip fourth of may cosplay saber");
         cliExecute("familiar hovering sombrero");
@@ -445,7 +441,6 @@ Then run 'kdcs weaponStart'`);
         cliExecute("cast 1 singer's faithful ocelot");
         cliExecute("cast 1 the spirit of taking ");
         cliExecute("use 1 bag of grain");
-        cliExecute("use 1 cyclops eyedrops");
         cliExecute("genie effect frosty");
 
         printHtml(`/*<br>
