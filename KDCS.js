@@ -45,6 +45,7 @@ const steps = {
         visitUrl("place.php?whichplace=town_right&action=townright_vote");
         visitUrl("choice.php?option=1&whichchoice=1331&g=2&local%5B%5D=2&local%5B%5D=3");
         visitUrl("place.php?whichplace=town_right&action=townright_vote");
+		
         
         //get consults 
         cliExecute("fortune cwbot pizza batman thick");
@@ -114,16 +115,20 @@ const steps = {
 		<br>
         // Map Monster - Haunted Pantry - Possessed Can of Tomatoes  (Feel Envy, Chest X-Ray)
         // Map Monster - Haunted Kitchen - Possessed Silverware Drawer (Feel Envy, Chest X-Ray)
-        // Map Monster - Skeleton Store – Novelty tropical skeleton
-		<br>
-        // equip kramco sausage-o-matic
-        // Fight a sausage Goblin at noob cave
+        // Map Monster - Skeleton Store – Novelty tropical skeleton (Feel Envy, Chest X-Ray)
 		<br>
        Then run:
 	   kdcs summons`);
     },
 
+	
     summons: function() {
+				
+		//let's grab that guaranteed sausage goblin
+		cliExecute("equip kramco sausage-o-matic");
+		cliExecute("/aa CS_Kills");
+		visitUrl("adventure.php?snarfblat=240");
+		
         cliExecute("cast 1 advanced cocktailcrafting");
         cliExecute("cast 1 advanced saucecrafting");
         cliExecute("cast 1 eye and a twist");
@@ -138,6 +143,7 @@ const steps = {
 	   kdcs buffs`);
     },
 
+	
     buffs: function() {
         cliExecute("familiar hovering sombrero");
         cliExecute("equip miniature crystal ball");
@@ -202,6 +208,7 @@ const steps = {
 	   kdcs postBuff`);
     },
 
+	
     postBuff: function() {
         cliExecute("eat 1 diabolic pizza");
 
@@ -210,100 +217,108 @@ const steps = {
 
         cliExecute("soak");
 
+	cliExecute("/aa CS_WitchessWitch");
         cliExecute("reminisce witchess witch");
 
+	/*
         printHtml(`
-    <br>
-    // beat up witchess witch
-    <br>
-   Then run:
-	   kdcs preMushroom`)
+    	<br>
+    	// beat up witchess witch
+    	<br>
+   	Then run:
+	kdcs preMushroom`)
     },
 
-    preMushroom: function() {
+    preMushroom: function() {		
+	*/
+
         cliExecute("maximize mys, equip garbage shirt, equip familiar scrapbook, equip fourth of may, equip draftsman, equip battle broom, equip hewn moon-rune spoon");
 		
-		cliExecute("create 1 magical sausage");
-		cliExecute("eat 1 magical sausage");
+	cliExecute("create 1 magical sausage");
+	cliExecute("eat 1 magical sausage");
 
         printHtml(`
 	<br>	
-    // Fight mushroom
-    // pick mushroom
+    	// Fight mushroom
+    	// pick mushroom
 	// Equip Lil Doctor Bag
-    // Go to NEP
-    // Reject quest
-    // Try and cast Feel Prides as late as possible, and make sure Familiar Scrapbook is equipped when you do.
-    <br>
-   Then run:
-	   kdcs mox`);
+    	// Go to NEP
+    	// Reject quest
+    	// Try and cast Feel Prides as late as possible, and make sure Familiar Scrapbook is equipped when you do.
+    	<br>
+   	Then run:
+	kdcs mox`);
     },
 
+	
     mox: function() {
         cliExecute("create 1 oil of expertise");
         cliExecute("use 1 oil of expertise");
         cliExecute("mood apathetic");
-
         cliExecute("maximize mox");
 
         printHtml(`
 	<br>	
-    // Do mox test (1)
-    <br>
-    Then run:
-	   kdcs mus`)
+    	// Do mox test (1)
+    	<br>
+    	Then run:
+	kdcs mus`)
     },
 
+	
     mus: function() {
         cliExecute("maximize mus");
 
         printHtml(`/
 	<br>	
-    // Do mus test (1)
-    // Do HP test (1)
-    <br>
-    Then run:
-	   kdcs mys`);
+   	// Do mus test (1)
+    	// Do HP test (1)
+    	<br>
+    	Then run:
+	kdcs mys`);
     },
 
+	
     mys: function() {
         cliExecute("maximize mys");
 
         printHtml(`
 	<br>	
-    // Do mys test (1)
-    <br>
-    Then run:
-	   kdcs hot`);
+    	// Do mys test (1)
+    	<br>
+    	Then run:
+	kdcs hot`);
     },
 
+	
     hot: function() {
-        cliExecute("familiar exotic parrot");
-        cliExecute("equip snow suit");
-
-        cliExecute("maximize hot res");
-
+        
+	// go foam/mist/saber a crate
         cliExecute("equip fourth of may cosplay saber");
         cliExecute("equip industrial fire extinguisher");
-
+    	cliExecute("equip vampyric cloake");
+	setProperty("choiceAdventure1387",2);
+	cliExecute("/aa CS_HotResPrep");
+	visitUrl("adventure.php?snarfblat=240");
+	    
+	cliExecute("familiar exotic parrot");
+        cliExecute("equip snow suit");
         cliExecute("spacegate vaccine 1");
         cliExecute("cast 1 feel peaceful");
-		cliExecute("cast 1 astral shell");
-		cliExecute("cast 1 elemental saucesphere");
+	cliExecute("cast 1 astral shell");
+	cliExecute("cast 1 elemental saucesphere");
         cliExecute("beach head 1");
+	cliExecute("maximize hot res");
 
         printHtml(`
 		<br>
-    // Fight crate at noob cave
-    // cast meteor shower
-    // cast foam yourself
-    // use the force, find 2 and meet here
     // Do hot res test (1)
     <br>
    Then run:
 	   kdcs noncombat`);
     },
 
+	
     noncombat: function() {
         cliExecute("familiar disgeist");
         cliExecute("equip snow suit");
@@ -325,6 +340,7 @@ const steps = {
 	   kdcs fam`);
     },
 
+	
     fam: function() {
         cliExecute("cast 2 ode to booze");
         cliExecute("drink 6 astral pilsner");
@@ -333,19 +349,24 @@ const steps = {
         cliExecute("cast 1 empathy of the newt");
         cliExecute("use 1 silver face paint ");
 
+	// go shower/saber a crate
+	cliExecute("equip fourth of may cosplay saber");
+	setProperty("choiceAdventure1387",2);
+	cliExecute("/aa CS_ShowerSaber");
+	visitUrl("adventure.php?snarfblat=240");
+
         printHtml(`
 		<br>
-	// Fight crate at noob cave
-	// cast meteor shower
-	// use the force, find 2 and meet here
+
 	// Do familiar weight test (32)
 <br>
 	Then run:
-	   kdcs weaponStart`);
+	   kdcs weapon`);
     },
 
-    weaponStart: function() {
-		cliExecute("acquire seal-skull helmet")
+	
+    weapon: function() {
+	cliExecute("acquire seal-skull helmet")
         cliExecute("familiar exotic parrot");
         cliExecute("equip snow suit");
         cliExecute("maximize spooky res");
@@ -354,10 +375,15 @@ const steps = {
         cliExecute("cast 1 astral shell");
         cliExecute("soak");
         cliExecute("cast 1 deep dark visions");
-
         cliExecute("cast 1 cannelloni cocoon");
+
+	// go shower/saber an Ungulith
+	cliExecute("equip fourth of may cosplay saber");
+	cliExecute("/aa CS_ShowerSaber");
+	setProperty("choiceAdventure1387", 3)
         cliExecute("reminisce ungulith");
 
+		/*
         printHtml(`
 		<br>
             // ungulith fight
@@ -369,7 +395,8 @@ const steps = {
     },
 
     weaponEnd: function() {
-        cliExecute("acquire 1 disco mask");
+		*/
+		
         cliExecute("maximize weapon damage");
         cliExecute("boombox fists");
         cliExecute("use 1 corrupted marrow");
@@ -382,22 +409,32 @@ const steps = {
         cliExecute("cast 1 rage of the reindeer");
         cliExecute("cast 1 scowl of the auk");
         cliExecute("cast 1 blessing of the war snapper");
+        cliExecute("acquire 1 disco mask");
         cliExecute("hatter 9");
         cliExecute("beach head 6");
         cliExecute("pool aggressive");
         cliExecute("cast 1 bow-legged swagger");
 
         printHtml(`
-          <br>
-		  // do weapon dmg test (1)
-           <br>
-            Then run:
-	   kdcs spellStart`);
+        	<br>
+		// do weapon dmg test (1)
+        	<br>
+        	Then run:
+		kdcs spell`);
     },
-    spellStart: function() {
-        cliExecute("equip fourth of may cosplay saber");
+	
+	
+    spell: function() {
+        
         cliExecute("Cast 1 simmer");
+		
+	// go shower/saber a crate
+ 	cliExecute("equip fourth of may cosplay saber");
+	setProperty("choiceAdventure1387",2);
+	cliExecute("/aa CS_ShowerSaber");
+	visitUrl("adventure.php?snarfblat=240");
 
+		/*
         printHtml(`
 		<br>
             // Fight crate at noob cave
@@ -409,6 +446,8 @@ const steps = {
     },
 
     spellEnd: function() {
+		*/
+		
         cliExecute("cast 1 song of sauce");
         cliExecute("cast 1 carol of the hells");
         cliExecute("cast 1 arched eyebrow of the archmage");
@@ -428,8 +467,9 @@ const steps = {
         cliExecute("soak");
         cliExecute("hermit clover");
         cliExecute("use 1 clover");
-		
-		visitUrl('adventure.php?snarfblat=19');
+	
+	// go get the cylcops eyedrops
+	visitUrl('adventure.php?snarfblat=19');
 		
         cliExecute("use 1 cyclops eyedrops");
         cliExecute("equip vampyric cloake");
@@ -438,20 +478,25 @@ const steps = {
         cliExecute("equip snow suit");
         cliExecute("equip off-hand familiar scrapbook");
 
+	// set auto-attack to bowl straight up, cast bat form and attack
+	cliExecute("/aa CS_BlackCrayonPirate");
         cliExecute("reminisce black crayon pirate");
 
+		/*
         printHtml(`
 		<br>
-            // black crayon pirate fight
-            // bowl straight up
-            // become a bat
-            // attack
-           <br>
-            Then run:
-	   kdcs itemEnd`);
+		// black crayon pirate fight
+		// bowl straight up
+		// become a bat
+		// attack
+		<br>
+		Then run:
+		kdcs itemEnd`);
     },
 
     itemEnd: function() {
+		*/
+	    
         cliExecute("maximize item drop, -equip broken champagne bottle");
         cliExecute("cast 1 feel lost");
         cliExecute("cast 1 steely-eyed squint");
