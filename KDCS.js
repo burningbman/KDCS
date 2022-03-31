@@ -9,7 +9,7 @@ const {
     getProperty,
     item,
     visitUrl,
-	runChoice,
+    runChoice,
     print,
     printHtml,
     wait
@@ -29,13 +29,13 @@ const steps = {
 
         printHtml(`
 		<br>
-        -------------------------------
-        ASCEND Normal Community Service
-        Blender, Pastamancer, Astral Trousers, Astral Pilsners
-        --------------------------------
+        	-------------------------------
+        	ASCEND Normal Community Service
+        	Blender, Pastamancer, Astral Trousers, Astral Pilsners
+        	--------------------------------
 		<br>
-        Then run:
-	   kdcs postAscension'
+        	Then run:
+		kdcs postAscension'
         `);
     },
 
@@ -113,21 +113,21 @@ const steps = {
 
         printHtml(`
 		<br>
-        // Map Monster - Haunted Pantry - Possessed Can of Tomatoes  (Feel Envy, Chest X-Ray)
-        // Map Monster - Haunted Kitchen - Possessed Silverware Drawer (Feel Envy, Chest X-Ray)
-        // Map Monster - Skeleton Store – Novelty tropical skeleton (Feel Envy, Chest X-Ray)
+		// Map Monster - Haunted Pantry - Possessed Can of Tomatoes  (Feel Envy, Chest X-Ray)
+		// Map Monster - Haunted Kitchen - Possessed Silverware Drawer (Feel Envy, Chest X-Ray)
+		// Map Monster - Skeleton Store – Novelty tropical skeleton (Feel Envy, Chest X-Ray)
 		<br>
-       Then run:
-	   kdcs summons`);
+		Then run:
+		kdcs summons`);
     },
 
 	
     summons: function() {
 				
-		//let's grab that guaranteed sausage goblin
-		cliExecute("equip kramco sausage-o-matic");
-		cliExecute("/aa CS_Kills");
-		visitUrl("adventure.php?snarfblat=240");
+	//let's grab that guaranteed sausage goblin
+	cliExecute("equip kramco sausage-o-matic");
+	cliExecute("/aa CS_Kills");
+	visitUrl("adventure.php?snarfblat=240");
 		
         cliExecute("cast 1 advanced cocktailcrafting");
         cliExecute("cast 1 advanced saucecrafting");
@@ -137,11 +137,11 @@ const steps = {
 
         printHtml(`
 		<br>
-    // Do Coil wire test
+		// Do Coil wire test
 		<br>
-   Then run:
-	   kdcs buffs`);
-    },
+   		Then run:
+		kdcs buffs`);
+    	},
 
 	
     buffs: function() {
@@ -196,17 +196,17 @@ const steps = {
         cliExecute("Bastille Myst");
 
         printHtml(`
-    <br>
-    // Daycare - scavenge
-    // Cook Pizza :
-    // - Magical Ice Cubes
-    // - Antique Packet of Ketchup
-    // - Little Paper Umbrella
-    // - 1952 Mickey Mantle Card
-    <br>
-    Then run:
-	   kdcs postBuff`);
-    },
+    		<br>
+    		// Daycare - scavenge
+   	 	// Cook Pizza :
+    		// - Magical Ice Cubes
+    		// - Antique Packet of Ketchup
+    		// - Little Paper Umbrella
+    		// - 1952 Mickey Mantle Card
+    		<br>
+    		Then run:
+		kdcs postBuff`);
+    	},
 
 	
     postBuff: function() {
@@ -222,11 +222,11 @@ const steps = {
 
 	/*
         printHtml(`
-    	<br>
-    	// beat up witchess witch
-    	<br>
-   	Then run:
-	kdcs preMushroom`)
+    		<br>
+    		// beat up witchess witch
+    		<br>
+   		Then run:
+		kdcs preMushroom`)
     },
 
     preMushroom: function() {		
@@ -238,16 +238,16 @@ const steps = {
 	cliExecute("eat 1 magical sausage");
 
         printHtml(`
-	<br>	
-    	// Fight mushroom
-    	// pick mushroom
-	// Equip Lil Doctor Bag
-    	// Go to NEP
-    	// Reject quest
-    	// Try and cast Feel Prides as late as possible, and make sure Familiar Scrapbook is equipped when you do.
-    	<br>
-   	Then run:
-	kdcs mox`);
+		<br>	
+    		// Fight mushroom
+    		// pick mushroom
+		// Equip Lil Doctor Bag
+    		// Go to NEP
+    		// Reject quest
+    		// Try and cast Feel Prides as late as possible, and make sure Familiar Scrapbook is equipped when you do.
+    		<br>
+   		Then run:
+		kdcs mox`);
     },
 
 	
@@ -258,11 +258,11 @@ const steps = {
         cliExecute("maximize mox");
 
         printHtml(`
-	<br>	
-    	// Do mox test (1)
-    	<br>
-    	Then run:
-	kdcs mus`)
+		<br>	
+    		// Do mox test (1)
+    		<br>
+    		Then run:
+		kdcs mus`)
     },
 
 	
@@ -270,12 +270,12 @@ const steps = {
         cliExecute("maximize mus");
 
         printHtml(`/
-	<br>	
-   	// Do mus test (1)
-    	// Do HP test (1)
-    	<br>
-    	Then run:
-	kdcs mys`);
+		<br>	
+   		// Do mus test (1)
+    		// Do HP test (1)
+    		<br>
+    		Then run:
+		kdcs mys`);
     },
 
 	
@@ -283,11 +283,11 @@ const steps = {
         cliExecute("maximize mys");
 
         printHtml(`
-	<br>	
-    	// Do mys test (1)
-    	<br>
-    	Then run:
-	kdcs hot`);
+		<br>	
+    		// Do mys test (1)
+    		<br>
+    		Then run:
+		kdcs hot`);
     },
 
 	
@@ -312,10 +312,10 @@ const steps = {
 
         printHtml(`
 		<br>
-    // Do hot res test (1)
-    <br>
-   Then run:
-	   kdcs noncombat`);
+    		// Do hot res test (1)
+    		<br>
+   		Then run:
+		kdcs noncombat`);
     },
 
 	
@@ -334,10 +334,10 @@ const steps = {
         cliExecute("genie effect disquiet riot");
 
         printHtml(`<br>
-    // do -combat test (1)
-    <br>
-    Then run:
-	   kdcs fam`);
+    		// do -combat test (1)
+    		<br>
+    		Then run:
+		kdcs fam`);
     },
 
 	
@@ -357,11 +357,10 @@ const steps = {
 
         printHtml(`
 		<br>
-
-	// Do familiar weight test (32)
-<br>
-	Then run:
-	   kdcs weapon`);
+		// Do familiar weight test (32)
+		<br>
+		Then run:
+		kdcs weapon`);
     },
 
 	
@@ -383,15 +382,15 @@ const steps = {
 	setProperty("choiceAdventure1387", 3)
         cliExecute("reminisce ungulith");
 
-		/*
+	/*
         printHtml(`
 		<br>
-            // ungulith fight
-            // meteor shower
-            // use the force, drop your things
-            <br>
-           Then run:
-	   kdcs weaponEnd`);
+        	// ungulith fight
+		// meteor shower
+        	// use the force, drop your things
+        	<br>
+        	Then run:
+		kdcs weaponEnd`);
     },
 
     weaponEnd: function() {
@@ -437,12 +436,12 @@ const steps = {
 		/*
         printHtml(`
 		<br>
-            // Fight crate at noob cave
-            // cast meteor shower
-            // use the force, find 2 and meet here
-            <br>
-           Then run:
-	   kdcs spellEnd`);
+		// Fight crate at noob cave
+            	// cast meteor shower
+            	// use the force, find 2 and meet here
+            	<br>
+           	Then run:
+	   	kdcs spellEnd`);
     },
 
     spellEnd: function() {
@@ -510,12 +509,12 @@ const steps = {
 
         printHtml(`
 		<br>
-        // do item test (1)
-        <br>
-        // final service
-       <br>
-       Then run:
-	   kdcs postRun`);
+		// do item test (1)
+		<br>
+		// final service
+		<br>
+		Then run:
+		kdcs postRun`);
     },
 
     /*
