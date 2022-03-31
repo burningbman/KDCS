@@ -26,7 +26,9 @@ const steps = {
         cliExecute("stash take 1 snow suit");
         cliExecute("use 1 diabolic pizza cube");
         cliExecute("/whitelist Old CW's Germ Free Clan");
-
+	
+	    
+	setProperty("_kdcs_next_step", "kdcs postAscension");
         printHtml(`
 		<br>
         	-------------------------------
@@ -111,6 +113,8 @@ const steps = {
         cliExecute("acquire turtle totem");
         cliExecute("acquire saucepan");
 
+	setProperty("_kdcs_next_step", "kdcs summons");
+	    
         printHtml(`
 		<br>
 		// Map Monster - Haunted Pantry - Possessed Can of Tomatoes  (Feel Envy, Chest X-Ray)
@@ -135,6 +139,8 @@ const steps = {
         cliExecute("maximize MP");
         cliExecute("Council");
 
+	setProperty("_kdcs_next_step", "kdcs buffs");
+	    
         printHtml(`
 		<br>
 		// Do Coil wire test
@@ -195,6 +201,8 @@ const steps = {
         cliExecute("mood cs");
         cliExecute("Bastille Myst");
 
+	setProperty("_kdcs_next_step", "kdcs postBuff");
+	    
         printHtml(`
     		<br>
     		// Daycare - scavenge
@@ -237,6 +245,8 @@ const steps = {
 	cliExecute("create 1 magical sausage");
 	cliExecute("eat 1 magical sausage");
 
+	setProperty("_kdcs_next_step", "mox");
+	    
         printHtml(`
 		<br>	
     		// Fight mushroom
@@ -257,6 +267,8 @@ const steps = {
         cliExecute("mood apathetic");
         cliExecute("maximize mox");
 
+	setProperty("_kdcs_next_step", "mus");
+	    
         printHtml(`
 		<br>	
     		// Do mox test (1)
@@ -269,6 +281,8 @@ const steps = {
     mus: function() {
         cliExecute("maximize mus");
 
+	setProperty("_kdcs_next_step", "mys");
+	    
         printHtml(`/
 		<br>	
    		// Do mus test (1)
@@ -282,6 +296,8 @@ const steps = {
     mys: function() {
         cliExecute("maximize mys");
 
+	setProperty("_kdcs_next_step", "hot");
+	    
         printHtml(`
 		<br>	
     		// Do mys test (1)
@@ -310,6 +326,8 @@ const steps = {
         cliExecute("beach head 1");
 	cliExecute("maximize hot res");
 
+	setProperty("_kdcs_next_step", "noncombat");
+	    
         printHtml(`
 		<br>
     		// Do hot res test (1)
@@ -333,6 +351,8 @@ const steps = {
         cliExecute("maximize -combat");
         cliExecute("genie effect disquiet riot");
 
+	setProperty("_kdcs_next_step", "fam");
+	    
         printHtml(`<br>
     		// do -combat test (1)
     		<br>
@@ -355,6 +375,8 @@ const steps = {
 	cliExecute("/aa CS_ShowerSaber");
 	visitUrl("adventure.php?snarfblat=240");
 
+	setProperty("_kdcs_next_step", "weapon");
+	    
         printHtml(`
 		<br>
 		// Do familiar weight test (32)
@@ -414,6 +436,8 @@ const steps = {
         cliExecute("pool aggressive");
         cliExecute("cast 1 bow-legged swagger");
 
+	setProperty("_kdcs_next_step", "spell");
+	    
         printHtml(`
         	<br>
 		// do weapon dmg test (1)
@@ -455,14 +479,16 @@ const steps = {
         cliExecute("beach head 7");
         cliExecute("maximize spell damage");
 
+	setProperty("_kdcs_next_step", "item");
+	    
         printHtml(`
 		<br>
             // do spell test (34)
            <br>
             Then run:
-	   kdcs itemStart`);
+	   kdcs item`);
     },
-    itemStart: function() {
+    item: function() {
         cliExecute("soak");
         cliExecute("hermit clover");
         cliExecute("use 1 clover");
@@ -507,6 +533,8 @@ const steps = {
         cliExecute("use 1 bag of grain");
         cliExecute("genie effect frosty");
 
+	setProperty("_kdcs_next_step", "postrun");
+	    
         printHtml(`
 		<br>
 		// do item test (1)
@@ -542,13 +570,20 @@ const steps = {
     }
 };
 
-function main(step) {
+function main(arg="") {
+    // If ran without arguments, and _kdcs_next_step blank, assume pre-ascension
+    if (arg === "" && getProperty("_kdcs_next_step") === "") {
+        setProperty("_kdcs_next_step", "preAscension");
+    }
+    // If there's an argument passed, run that
+    // Otherwise run what _kdcs_next_step says
+    const step = arg !== "" ? arg : getProperty("_kdcs_next_step");
     // See if the passed in step matches any of the functions named in the steps object
     if (steps.hasOwnProperty(step)) {
         // if a valid step was passed in, call the corresponding method
         steps[step]();
     } else {
-		print(`Unrecognized step '${step}'. First step is preAscension.`, 'red');
+        print(`Unrecognized step '${step}'. First step is preAscension.`, 'red');
     }
 }
 
