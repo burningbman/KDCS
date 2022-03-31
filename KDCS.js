@@ -9,6 +9,7 @@ const {
     getProperty,
     item,
     visitUrl,
+	runChoice,
     print,
     printHtml,
     wait
@@ -27,17 +28,18 @@ const steps = {
         cliExecute("/whitelist Old CW's Germ Free Clan");
 
         printHtml(`
-        ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼<br>
-        ASCEND Normal Community Service<br>
-        Blender, Pastamancer, Astral Trousers, Astral Pilsners<br>
-        ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲<br>
-<br>
-        -------------------------------<br>
-        | POST-ASCENSION              |<br>
-        -------------------------------<br>
-<br>
-        Get pork gems and autosell<br>
-        Then run 'kdcs postAscension'
+        ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼
+        ASCEND Normal Community Service
+        Blender, Pastamancer, Astral Trousers, Astral Pilsners
+        ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲
+
+        -------------------------------
+        | POST-ASCENSION              |
+        -------------------------------
+
+        Get pork gems and autosell
+        Then run:
+	   kdcs postAscension'
         `);
     },
 
@@ -113,15 +115,16 @@ const steps = {
         cliExecute("acquire saucepan");
 
         printHtml(`
-        /*
-        // Map Monster - Haunted Pantry - Possessed Can of Tomatoes  (Feel Envy, Chest X-Ray)<br>
-        // Map Monster - Haunted Kitchen - Possessed Silverware Drawer (Feel Envy, Chest X-Ray)<br>
-        // Map Monster - Skeleton Store – Novelty tropical skeleton<br>
-        //<br>
-        // equip kramco sausage-o-matic<br>
-        // Fight a sausage Goblin at noob cave<br>
-        */<br>
-       Then run 'kdcs summons'`);
+
+        // Map Monster - Haunted Pantry - Possessed Can of Tomatoes  (Feel Envy, Chest X-Ray)
+        // Map Monster - Haunted Kitchen - Possessed Silverware Drawer (Feel Envy, Chest X-Ray)
+        // Map Monster - Skeleton Store – Novelty tropical skeleton
+
+        // equip kramco sausage-o-matic
+        // Fight a sausage Goblin at noob cave
+		
+       Then run:
+	   kdcs summons`);
     },
 
     summons: function() {
@@ -132,10 +135,11 @@ const steps = {
         cliExecute("Council");
 
         printHtml(`
-    /*<br>
-    // Do Coil wire test<br>
-    */<br>
-   Then run 'kdcs buffs'`);
+		
+    // Do Coil wire test
+    
+   Then run:
+	   kdcs buffs`);
     },
 
     buffs: function() {
@@ -190,15 +194,16 @@ const steps = {
         cliExecute("Bastille Myst");
 
         printHtml(`
-    /*<br>
-    // Daycare - scavenge<br>
-    // Cook Pizza :<br>
-    // - Magical Ice Cubes<br>
-    // - Antique Packet of Ketchup<br>
-    // - Little Paper Umbrella<br>
-    // - 1952 Mickey Mantle Card<br>
-    */<br>
-    Then run 'kdcs postBuff'`);
+    
+    // Daycare - scavenge
+    // Cook Pizza :
+    // - Magical Ice Cubes
+    // - Antique Packet of Ketchup
+    // - Little Paper Umbrella
+    // - 1952 Mickey Mantle Card
+    
+    Then run:
+	   kdcs postBuff`);
     },
 
     postBuff: function() {
@@ -212,23 +217,30 @@ const steps = {
         cliExecute("reminisce witchess witch");
 
         printHtml(`
-    /*<br>
-    // beat up witchess witch<br>
-    */<br>
-   Then run 'kdcs preMushroom'`)
+    
+    // beat up witchess witch
+    
+   Then run:
+	   kdcs preMushroom`)
     },
 
     preMushroom: function() {
         cliExecute("maximize mys, equip garbage shirt, equip familiar scrapbook, equip fourth of may, equip draftsman, equip battle broom, equip hewn moon-rune spoon");
+		
+		cliExecute("create 1 magical sausage");
+		cliExecute("eat 1 magical sausage");
 
-        printHtml(`/*<br>
-    // Fight mushroom<br>
-    // pick mushroom<br>
-    // Go to NEP<br>
-    // Reject quest<br>
-    // Try and cast Feel Prides as late as possible, and make sure Familiar Scrapbook is equipped when you do<br>
-    */<br>
-   Then run 'kdcs mox'`);
+        printHtml(`
+		
+    // Fight mushroom
+    // pick mushroom
+	// Equip Lil Doctor Bag
+    // Go to NEP
+    // Reject quest
+    // Try and cast Feel Prides as late as possible, and make sure Familiar Scrapbook is equipped when you do.
+    
+   Then run:
+	   kdcs mox`);
     },
 
     mox: function() {
@@ -238,29 +250,35 @@ const steps = {
 
         cliExecute("maximize mox");
 
-        printHtml(`/*<br>
-    // Do mox test (1)<br>
-    */<br>
-    Then run 'kdcs mus'`)
+        printHtml(`
+		
+    // Do mox test (1)
+    
+    Then run:
+	   kdcs mus`)
     },
 
     mus: function() {
         cliExecute("maximize mus");
 
-        printHtml(`/*<br>
-    // Do mus test (1)<br>
-    // Do HP test (1)<br>
-    */<br>
-    Then run 'kdcs mys'`);
+        printHtml(`/
+		
+    // Do mus test (1)
+    // Do HP test (1)
+    
+    Then run:
+	   kdcs mys`);
     },
 
     mys: function() {
         cliExecute("maximize mys");
 
-        printHtml(`/*<br>
-    // Do mys test (1)<br>
-    */<br>
-    Then run 'kdcs hot'`);
+        printHtml(`
+		
+    // Do mys test (1)
+    
+    Then run:
+	   kdcs hot`);
     },
 
     hot: function() {
@@ -274,16 +292,20 @@ const steps = {
 
         cliExecute("spacegate vaccine 1");
         cliExecute("cast 1 feel peaceful");
+		cliExecute("cast 1 astral shell");
+		cliExecute("cast 1 elemental saucesphere");
         cliExecute("beach head 1");
 
-        printHtml(`/*<br>
-    // Fight crate at noob cave<br>
-    // cast meteor shower<br>
-    // cast foam yourself<br>
-    // use the force, find 2 and meet here<br>
-    // Do hot res test (1)<br>
-    */<br>
-   Then run 'kdcs noncombat'`);
+        printHtml(`
+		<br>
+    // Fight crate at noob cave
+    // cast meteor shower
+    // cast foam yourself
+    // use the force, find 2 and meet here
+    // Do hot res test (1)
+    <br>
+   Then run:
+	   kdcs noncombat`);
     },
 
     noncombat: function() {
@@ -300,10 +322,11 @@ const steps = {
         cliExecute("maximize -combat");
         cliExecute("genie effect disquiet riot");
 
-        printHtml(`/*<br>
-    // do -combat test (1)<br>
-    */<br>
-    Then run 'kdcs fam'`);
+        printHtml(`<br>
+    // do -combat test (1)
+    <br>
+    Then run:
+	   kdcs fam`);
     },
 
     fam: function() {
@@ -314,16 +337,19 @@ const steps = {
         cliExecute("cast 1 empathy of the newt");
         cliExecute("use 1 silver face paint ");
 
-        printHtml(`/*<br>
-// Fight crate at noob cave<br>
-// cast meteor shower<br>
-// use the force, find 2 and meet here<br>
-// Do familiar weight test (32)<br>
-*/<br>
-Then run 'kdcs weaponStart'`);
+        printHtml(`
+		<br>
+	// Fight crate at noob cave
+	// cast meteor shower
+	// use the force, find 2 and meet here
+	// Do familiar weight test (32)
+<br>
+	Then run:
+	   kdcs weaponStart`);
     },
 
     weaponStart: function() {
+		cliExecute("acquire seal-skull helmet")
         cliExecute("familiar exotic parrot");
         cliExecute("equip snow suit");
         cliExecute("maximize spooky res");
@@ -336,12 +362,14 @@ Then run 'kdcs weaponStart'`);
         cliExecute("cast 1 cannelloni cocoon");
         cliExecute("reminisce ungulith");
 
-        printHtml(`/*<br>
-            // ungulith fight<br>
-            // meteor shower<br>
-            // use the force, drop your things<br>
-            */<br>
-           Then run 'kdcs weaponEnd'`);
+        printHtml(`
+		<br>
+            // ungulith fight
+            // meteor shower
+            // use the force, drop your things
+            <br>
+           Then run:
+	   kdcs weaponEnd`);
     },
 
     weaponEnd: function() {
@@ -363,21 +391,25 @@ Then run 'kdcs weaponStart'`);
         cliExecute("pool aggressive");
         cliExecute("cast 1 bow-legged swagger");
 
-        printHtml(`/*<br>
-            // do weapon dmg test (1)<br>
-            */<br>
-            Then run 'kdcs spellStart'`);
+        printHtml(`
+          <br>
+		  // do weapon dmg test (1)
+           <br>
+            Then run:
+	   kdcs spellStart`);
     },
     spellStart: function() {
         cliExecute("equip fourth of may cosplay saber");
         cliExecute("Cast 1 simmer");
 
-        printHtml(`/*<br>
-            // Fight crate at noob cave<br>
-            // cast meteor shower<br>
-            // use the force, find 2 and meet here<br>
-            */<br>
-           Then run 'kdcs spellEnd'`);
+        printHtml(`
+		<br>
+            // Fight crate at noob cave
+            // cast meteor shower
+            // use the force, find 2 and meet here
+            <br>
+           Then run:
+	   kdcs spellEnd`);
     },
 
     spellEnd: function() {
@@ -389,23 +421,20 @@ Then run 'kdcs weaponStart'`);
         cliExecute("beach head 7");
         cliExecute("maximize spell damage");
 
-        printHtml(`/*<br>
-            // do spell test (34)<br>
-            */<br>
-            Then run 'kdcs itemStart'`);
+        printHtml(`
+		<br>
+            // do spell test (34)
+           <br>
+            Then run:
+	   kdcs itemStart`);
     },
     itemStart: function() {
         cliExecute("soak");
         cliExecute("hermit clover");
         cliExecute("use 1 clover");
-
-        printHtml(`/*<br>
-            // visit limerick dungeon & get eyedrops<br>
-            */<br>
-            Then run 'kdcs itemMid'`);
-    },
-
-    itemMid: function() {
+		
+		visitUrl('adventure.php?snarfblat=19');
+		
         cliExecute("use 1 cyclops eyedrops");
         cliExecute("equip vampyric cloake");
         cliExecute("equip fourth of may cosplay saber");
@@ -415,13 +444,15 @@ Then run 'kdcs weaponStart'`);
 
         cliExecute("reminisce black crayon pirate");
 
-        printHtml(`/*<br>
-            // black crayon pirate fight<br>
-            // bowl straight up<br>
-            // bat form<br>
-            // attack<br>
-            */<br>
-            Then run 'kdcs itemEnd'`);
+        printHtml(`
+		<br>
+            // black crayon pirate fight
+            // bowl straight up
+            // become a bat
+            // attack
+           <br>
+            Then run:
+	   kdcs itemEnd`);
     },
 
     itemEnd: function() {
@@ -436,14 +467,14 @@ Then run 'kdcs weaponStart'`);
         cliExecute("use 1 bag of grain");
         cliExecute("genie effect frosty");
 
-        printHtml(`/*<br>
-        // do item test (1)<br>
-        */<br>
-<br>
-        /*<br>
-        // final service<br>
-        */<br>
-       Then run 'kdcs postRun'`);
+        printHtml(`
+		<br>
+        // do item test (1)
+        <br>
+        // final service
+       <br>
+       Then run:
+	   kdcs postRun`);
     },
 
     /*
@@ -477,7 +508,7 @@ function main(step) {
         // if a valid step was passed in, call the corresponding method
         steps[step]();
     } else {
-        print(`Unrecognized step '${step}'`, 'red');
+		print(`Unrecognized step '${step}'. First step is preAscension.`, 'red');
     }
 }
 
