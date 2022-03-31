@@ -7,6 +7,7 @@ const {
     cliExecute,
     setProperty,
     getProperty,
+    item,
     visitUrl,
     print,
     printHtml,
@@ -61,25 +62,17 @@ const steps = {
 
         // visit the toot oriole
         visitUrl("tutorial.php?action=toot");
-        visitUrl("tutorial.php?action=toot");
 
         cliExecute("use 1 letter from King Ralph XI");
         cliExecute("use 1 pork elf goodies sack");
+     
+        autosell(availableAmount(Item.get("hamethyst")), Item.get("hamethyst"));
+        autosell(availableAmount(Item.get("baconstone")), Item.get("baconstone"));
         
-        /* 
-        
-        // Need to figure out a way to count how many of each gem I have and sell them, do I need to pull code for $item from libram?
-        
-        autosell(availableAmount($item`hamethyst`), $item`hamethyst`);
-        autosell(availableAmount($item`baconstone`), $item`baconstone`);
-        
-        // keep 2 porqouises if we have more
-        if availableAmount($item`porquoise`) > 1 {
-        cliExecute("Closet put 2 porquoise");
+        // sell all but 2 porqouises if we have 3 or more
+        if (availableAmount(Item.get("porquoise")) > 2) {
+        autosell(availableAmount(Item.get("porquoise"))-2, Item.get("porquoise"));
         }
-        autosell(availableAmount($item`porquoise`), $item`porqouise`);
-        
-        */
         
         // manual visit to fireworks shop to allow purchases
         visitUrl('clan_viplounge.php?action=fwshop');    
