@@ -28,16 +28,12 @@ const steps = {
         cliExecute("/whitelist Old CW's Germ Free Clan");
 
         printHtml(`
-        ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼
+		<br>
+        -------------------------------
         ASCEND Normal Community Service
         Blender, Pastamancer, Astral Trousers, Astral Pilsners
-        ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲
-
-        -------------------------------
-        | POST-ASCENSION              |
-        -------------------------------
-
-        Get pork gems and autosell
+        --------------------------------
+		<br>
         Then run:
 	   kdcs postAscension'
         `);
@@ -115,14 +111,14 @@ const steps = {
         cliExecute("acquire saucepan");
 
         printHtml(`
-
+		<br>
         // Map Monster - Haunted Pantry - Possessed Can of Tomatoes  (Feel Envy, Chest X-Ray)
         // Map Monster - Haunted Kitchen - Possessed Silverware Drawer (Feel Envy, Chest X-Ray)
         // Map Monster - Skeleton Store – Novelty tropical skeleton
-
+		<br>
         // equip kramco sausage-o-matic
         // Fight a sausage Goblin at noob cave
-		
+		<br>
        Then run:
 	   kdcs summons`);
     },
@@ -135,9 +131,9 @@ const steps = {
         cliExecute("Council");
 
         printHtml(`
-		
+		<br>
     // Do Coil wire test
-    
+		<br>
    Then run:
 	   kdcs buffs`);
     },
@@ -194,14 +190,14 @@ const steps = {
         cliExecute("Bastille Myst");
 
         printHtml(`
-    
+    <br>
     // Daycare - scavenge
     // Cook Pizza :
     // - Magical Ice Cubes
     // - Antique Packet of Ketchup
     // - Little Paper Umbrella
     // - 1952 Mickey Mantle Card
-    
+    <br>
     Then run:
 	   kdcs postBuff`);
     },
@@ -217,9 +213,9 @@ const steps = {
         cliExecute("reminisce witchess witch");
 
         printHtml(`
-    
+    <br>
     // beat up witchess witch
-    
+    <br>
    Then run:
 	   kdcs preMushroom`)
     },
@@ -231,14 +227,14 @@ const steps = {
 		cliExecute("eat 1 magical sausage");
 
         printHtml(`
-		
+	<br>	
     // Fight mushroom
     // pick mushroom
 	// Equip Lil Doctor Bag
     // Go to NEP
     // Reject quest
     // Try and cast Feel Prides as late as possible, and make sure Familiar Scrapbook is equipped when you do.
-    
+    <br>
    Then run:
 	   kdcs mox`);
     },
@@ -251,9 +247,9 @@ const steps = {
         cliExecute("maximize mox");
 
         printHtml(`
-		
+	<br>	
     // Do mox test (1)
-    
+    <br>
     Then run:
 	   kdcs mus`)
     },
@@ -262,10 +258,10 @@ const steps = {
         cliExecute("maximize mus");
 
         printHtml(`/
-		
+	<br>	
     // Do mus test (1)
     // Do HP test (1)
-    
+    <br>
     Then run:
 	   kdcs mys`);
     },
@@ -274,9 +270,9 @@ const steps = {
         cliExecute("maximize mys");
 
         printHtml(`
-		
+	<br>	
     // Do mys test (1)
-    
+    <br>
     Then run:
 	   kdcs hot`);
     },
