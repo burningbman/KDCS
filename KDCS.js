@@ -28,7 +28,7 @@ const steps = {
         cliExecute("/whitelist Old CW's Germ Free Clan");
 	
 	    
-	setProperty("_kdcs_next_step", "kdcs postAscension");
+	setProperty("_kdcs_next_step", "postAscension");
         printHtml(`
 		<br>
         	-------------------------------
@@ -113,7 +113,7 @@ const steps = {
         cliExecute("acquire turtle totem");
         cliExecute("acquire saucepan");
 
-	setProperty("_kdcs_next_step", "kdcs summons");
+	setProperty("_kdcs_next_step", "summons");
 	    
         printHtml(`
 		<br>
@@ -139,7 +139,7 @@ const steps = {
         cliExecute("maximize MP");
         cliExecute("Council");
 
-	setProperty("_kdcs_next_step", "kdcs buffs");
+	setProperty("_kdcs_next_step", "buffs");
 	    
         printHtml(`
 		<br>
@@ -201,7 +201,7 @@ const steps = {
         cliExecute("mood cs");
         cliExecute("Bastille Myst");
 
-	setProperty("_kdcs_next_step", "kdcs postBuff");
+	setProperty("_kdcs_next_step", "postBuff");
 	    
         printHtml(`
     		<br>
