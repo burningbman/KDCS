@@ -7,6 +7,7 @@ const {
     cliExecute,
     setProperty,
     getProperty,
+	handlingChoice,
     item,
     visitUrl,
     runChoice,
@@ -37,7 +38,7 @@ const steps = {
         	--------------------------------
 		<br>
         	Then run:
-		kdcs postAscension'
+		kdcs postAscension
         `);
     },
 
@@ -114,14 +115,7 @@ const steps = {
         cliExecute("acquire saucepan");
 		
 		
-		/*
-		// bean's map the monsters code (uses lib and libram)
-		
-		Macro.skill($skill`Feel Envy`).skill($skill`Chest X-Ray`).setAutoAttack();
-		mapMonster($location`The Haunted Pantry`, $monster`possessed can of tomatoes`);
-		runCombat();
-		
-		// my code?
+
 		
 		// get ready to map monsters!
 		cliExecute("equip lil doctor bag");
@@ -143,10 +137,7 @@ const steps = {
 		visitUrl("adventure.php?snarfblat=439");
 		visitUrl("adventure.php?snarfblat=439");
 		runChoice(1, "heyscriptswhatsupwinkwink=1746");
-		
-		*/
 
-		
 
 	setProperty("_kdcs_next_step", "summons");
 	    
@@ -173,6 +164,8 @@ const steps = {
         cliExecute("cast 1 eye and a twist");
         cliExecute("maximize MP");
         cliExecute("Council");
+		
+		// visitUrl("choice.php?whichchoice=1089&option=11");
 
 	setProperty("_kdcs_next_step", "buffs");
 	    
@@ -236,48 +229,29 @@ const steps = {
         cliExecute("mood cs");
         cliExecute("Bastille Myst");
 		
-		/*
-		// Cook Pizza :
-    		// - Magical Ice Cubes
-    		// - Antique Packet of Ketchup
-    		// - Little Paper Umbrella
-    		// - 1952 Mickey Mantle Card
-			
 		visitUrl("campground.php?action=makepizza&pizza=1008,2841,635,8404");
-		
+		cliExecute("eat 1 diabolic pizza");
+
 		// Scavenge at daycare
-		visitUrl('/place.php?whichplace=town_wrong&action=townwrong_boxingdaycare');
+		visitUrl("place.php?whichplace=town_wrong&action=townwrong_boxingdaycare");
 		runChoice(3);
 		runChoice(2);
-		*/
-
-
-	setProperty("_kdcs_next_step", "postBuff");
-	    
-        printHtml(`
-    		<br>
-    		// Daycare - scavenge
-   	 	// Cook Pizza :
-    		// - Magical Ice Cubes
-    		// - Antique Packet of Ketchup
-    		// - Little Paper Umbrella
-    		// - 1952 Mickey Mantle Card
-    		<br>
-    		Then run:
-		kdcs postBuff`);
-    	},
-
-	
-    postBuff: function() {
-        cliExecute("eat 1 diabolic pizza");
-
+		
         cliExecute("maximize mys, equip garbage shirt, equip familiar scrapbook, equip fourth of may, equip draftsman, equip backup camera");
         cliExecute("backupcamera ml");
 
         cliExecute("soak");
 
-	cliExecute("/aa CS_WitchessWitch");
+		cliExecute("/aa CS_WitchessWitch");
         cliExecute("reminisce witchess witch");
+		
+		cliExecute("/aa CS_Kills");
+		
+		visitUrl("adventure.php?snarfblat=543");
+		
+		visitUrl("adventure.php?snarfblat=543");
+		runChoice(2);
+		
 
 	/*
         printHtml(`
@@ -300,8 +274,6 @@ const steps = {
 	    
         printHtml(`
 		<br>	
-    		// Fight mushroom
-    		// pick mushroom
 		// Equip Lil Doctor Bag
     		// Go to NEP
     		// Reject quest
@@ -367,6 +339,7 @@ const steps = {
 		setProperty("choiceAdventure1387",2);
 		cliExecute("/aa CS_HotResPrep");
 		visitUrl("adventure.php?snarfblat=240");
+		if (handlingChoice()) runChoice(-1);
 	    
 		cliExecute("familiar exotic parrot");
         cliExecute("equip snow suit");
@@ -425,6 +398,7 @@ const steps = {
 	setProperty("choiceAdventure1387",2);
 	cliExecute("/aa CS_ShowerSaber");
 	visitUrl("adventure.php?snarfblat=240");
+	if (handlingChoice()) runChoice(-1);
 
 	setProperty("_kdcs_next_step", "weapon");
 	    
@@ -438,7 +412,6 @@ const steps = {
 
 	
     weapon: function() {
-	cliExecute("acquire seal-skull helmet")
         cliExecute("familiar exotic parrot");
         cliExecute("equip snow suit");
         cliExecute("maximize spooky res");
@@ -454,21 +427,8 @@ const steps = {
 	cliExecute("/aa CS_ShowerSaber");
 	setProperty("choiceAdventure1387", 3)
         cliExecute("reminisce ungulith");
+		if (handlingChoice()) runChoice(-1);
 
-	/*
-        printHtml(`
-		<br>
-        	// ungulith fight
-		// meteor shower
-        	// use the force, drop your things
-        	<br>
-        	Then run:
-		kdcs weaponEnd`);
-    },
-
-    weaponEnd: function() {
-		*/
-		
         cliExecute("maximize weapon damage");
         cliExecute("boombox fists");
         cliExecute("use 1 corrupted marrow");
@@ -507,20 +467,7 @@ const steps = {
 	setProperty("choiceAdventure1387",2);
 	cliExecute("/aa CS_ShowerSaber");
 	visitUrl("adventure.php?snarfblat=240");
-
-		/*
-        printHtml(`
-		<br>
-		// Fight crate at noob cave
-            	// cast meteor shower
-            	// use the force, find 2 and meet here
-            	<br>
-           	Then run:
-	   	kdcs spellEnd`);
-    },
-
-    spellEnd: function() {
-		*/
+	if (handlingChoice()) runChoice(-1);
 		
         cliExecute("cast 1 song of sauce");
         cliExecute("cast 1 carol of the hells");
@@ -557,21 +504,6 @@ const steps = {
 	// set auto-attack to bowl straight up, cast bat form and attack
 	cliExecute("/aa CS_BlackCrayonPirate");
         cliExecute("reminisce black crayon pirate");
-
-		/*
-        printHtml(`
-		<br>
-		// black crayon pirate fight
-		// bowl straight up
-		// become a bat
-		// attack
-		<br>
-		Then run:
-		kdcs itemEnd`);
-    },
-
-    itemEnd: function() {
-		*/
 	    
         cliExecute("maximize item drop, -equip broken champagne bottle");
         cliExecute("cast 1 feel lost");
@@ -584,7 +516,7 @@ const steps = {
         cliExecute("use 1 bag of grain");
         cliExecute("genie effect frosty");
 
-	setProperty("_kdcs_next_step", "postrun");
+	setProperty("_kdcs_next_step", "postRun");
 	    
         printHtml(`
 		<br>
@@ -601,10 +533,12 @@ const steps = {
     | Post-Run Stuff      |
     -----------------------
     */
+	
     postRun: function() {
         cliExecute("/whitelist Alliance From Heck");
         cliExecute("unequip snow suit");
         cliExecute("stash put 1 snow suit");
+		
         cliExecute("boombox meat");
         cliExecute("mood apathetic");
         cliExecute("pull all");
@@ -621,20 +555,13 @@ const steps = {
     }
 };
 
-function main(arg="") {
-    // If ran without arguments, and _kdcs_next_step blank, assume pre-ascension
-    if (arg === "" && getProperty("_kdcs_next_step") === "") {
-        setProperty("_kdcs_next_step", "preAscension");
-    }
-    // If there's an argument passed, run that
-    // Otherwise run what _kdcs_next_step says
-    const step = arg !== "" ? arg : getProperty("_kdcs_next_step");
+function main(step) {
     // See if the passed in step matches any of the functions named in the steps object
     if (steps.hasOwnProperty(step)) {
         // if a valid step was passed in, call the corresponding method
         steps[step]();
     } else {
-        print(`Unrecognized step '${step}'. First step is preAscension.`, 'red');
+        print(`Unrecognized step '${step}'`, 'red');
     }
 }
 
