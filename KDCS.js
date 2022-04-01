@@ -112,6 +112,41 @@ const steps = {
         cliExecute("use 1 dramatic range");
         cliExecute("acquire turtle totem");
         cliExecute("acquire saucepan");
+		
+		
+		/*
+		// bean's map the monsters code (uses lib and libram)
+		
+		Macro.skill($skill`Feel Envy`).skill($skill`Chest X-Ray`).setAutoAttack();
+		mapMonster($location`The Haunted Pantry`, $monster`possessed can of tomatoes`);
+		runCombat();
+		
+		// my code?
+		
+		// get ready to map monsters!
+		cliExecute("equip lil doctor bag");
+		cliExecute("/aa CS_MapMonsters");
+		
+		// Map Monster - Haunted Pantry - Possessed Can of Tomatoes 
+		cliExecute("cast 1 Map the Monsters");
+		visitUrl("adventure.php?snarfblat=113");
+		runChoice(1, "heyscriptswhatsupwinkwink=145");
+		
+		// Map Monster - Haunted Kitchen - Possessed Silverware Drawer
+		cliExecute("cast 1 Map the Monsters");
+		visitUrl("adventure.php?snarfblat=388");
+		runChoice(1, "heyscriptswhatsupwinkwink=372");
+		
+		// Map Monster - Skeleton Store – Novelty tropical skeleton
+		cliExecute("cast 1 Map the Monsters");
+		// Need to visit twice to get past initial NC
+		visitUrl("adventure.php?snarfblat=439");
+		visitUrl("adventure.php?snarfblat=439");
+		runChoice(1, "heyscriptswhatsupwinkwink=1746");
+		
+		*/
+
+		
 
 	setProperty("_kdcs_next_step", "summons");
 	    
@@ -200,6 +235,22 @@ const steps = {
 
         cliExecute("mood cs");
         cliExecute("Bastille Myst");
+		
+		/*
+		// Cook Pizza :
+    		// - Magical Ice Cubes
+    		// - Antique Packet of Ketchup
+    		// - Little Paper Umbrella
+    		// - 1952 Mickey Mantle Card
+			
+		visitUrl("campground.php?action=makepizza&pizza=1008,2841,635,8404");
+		
+		// Scavenge at daycare
+		visitUrl('/place.php?whichplace=town_wrong&action=townwrong_boxingdaycare');
+		runChoice(3);
+		runChoice(2);
+		*/
+
 
 	setProperty("_kdcs_next_step", "postBuff");
 	    
@@ -313,18 +364,18 @@ const steps = {
         cliExecute("equip fourth of may cosplay saber");
         cliExecute("equip industrial fire extinguisher");
     	cliExecute("equip vampyric cloake");
-	setProperty("choiceAdventure1387",2);
-	cliExecute("/aa CS_HotResPrep");
-	visitUrl("adventure.php?snarfblat=240");
+		setProperty("choiceAdventure1387",2);
+		cliExecute("/aa CS_HotResPrep");
+		visitUrl("adventure.php?snarfblat=240");
 	    
-	cliExecute("familiar exotic parrot");
+		cliExecute("familiar exotic parrot");
         cliExecute("equip snow suit");
         cliExecute("spacegate vaccine 1");
         cliExecute("cast 1 feel peaceful");
-	cliExecute("cast 1 astral shell");
-	cliExecute("cast 1 elemental saucesphere");
+		cliExecute("cast 1 astral shell");
+		cliExecute("cast 1 elemental saucesphere");
         cliExecute("beach head 1");
-	cliExecute("maximize hot res");
+		cliExecute("maximize hot res");
 
 	setProperty("_kdcs_next_step", "noncombat");
 	    
