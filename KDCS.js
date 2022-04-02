@@ -1,438 +1,599 @@
-CS proto-script
-
--------------------------------
-| PRE-ASCENSION               |
--------------------------------
-
-/whitelist Alliance From Heck;
-stash take 1 snow suit;
-use 1 diabolic pizza cube;
-/whitelist Old CW's Germ Free Clan;
-
-
-
-▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼
-
-ASCEND Normal Community Service
-Blender, Pastamancer, Astral Trousers, Astral Pilsners
-
-▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲
-
--------------------------------
-| POST-ASCENSION              |
--------------------------------
-
-
-/* - Voting code
-ash visit_url("place.php?whichplace=town_right&action=townright_vote");
-ash visit_url("choice.php?option=1&whichchoice=1331&g=2&local%5B%5D=2&local%5B%5D=3");
-ash visit_url("place.php?whichplace=town_right&action=townright_vote");
-
-ash visit_url("tutorial.php?action=toot");
-*/
-
-/*
------------------------------------------
- Vote!(weapon damage, familiar weight, any candidate)
- Get pork gems and autosell
- Visit meatsmith & accept quest
------------------------------------------
-*/
-
-use 1 letter from King Ralph XI;
-use 1 pork elf goodies sack;
-
-fortune cwbot pizza batman thick;
-wait 5;
-fortune cwbot pizza batman thick;
-wait 5;
-fortune cwbot pizza batman thick;
-
-pull 1 snow suit;
-
-buy using storage 1 borrowed time;
-buy using storage 1 1952 Mickey Mantle card;
-buy using storage 1 non-Euclidean angle;
-
-pull 1 borrowed time;
-pull 1 non-Euclidean angle;
-pull 1 1952 Mickey Mantle card;
-Pull 1 staff of simmering hatred;
-
-breakfast;
-detective solver;
-numberology 69;
-saber familiar;
-backupcamera reverser on;
-backupcamera ml;
-retrocape mysticality thrill;
-maximize mys, equip garbage shirt, equip familiar scrapbook, equip fourth of may, equip lil doctor, equip eight days a week pill keeper;
-cargo 284;
-use 1 borrowed time;
-use 1 bird-a-day calendar;
-use 1 astral six-pack;
-boombox meat;
-autosell Newbiesport Tent;
-create fish hatchet;
-familiar plastic pirate skull;
-equip miniature crystal ball;
-
-buy 1 toy accordion;
-buy 1 glittery mascara;
-buy 1 dramatic range;
-use 1 dramatic range;
-acquire 1 turtle totem;
-acquire saucepan;
-acquire 1 disco mask;
-
-
-
-/*
-----------------------------------------------------------------------------------------
-if need worthless x, acquire 1 worthless x 
-
-Map Monster - Haunted Pantry - Possessed Can of Tomatoes  (Feel Envy, Chest X-Ray)
-Map Monster - Haunted Kitchen - Possessed Silverware Drawer (Feel Envy, Chest X-Ray)
-Map Monster - Skeleton Store – Novelty tropical skeleton
-
-equip kramco sausage-o-matic
-Fight a sausage Goblin at noob cave
-----------------------------------------------------------------------------------------
-*/
-
-cast 1 advanced cocktailcrafting;
-cast 1 advanced saucecrafting;
-cast 1 eye and a twist;
-maximize MP;
-council;
-
-------------------------------
-// Do Coil wire test (60)
-------------------------------
-
-familiar hovering sombrero;
-equip miniature crystal ball;
-
-shower lukewarm;
-cast 1 inscrutable gaze;
-chew 1 non-Euclidean angle;
-daycare mysticality;
-telescope look high;
-monorail;
-use 1 votive of confidence;
-use 1 glittery mascara;
-
-cast 1 advanced cocktailcrafting;
-cast 1 advanced saucecrafting;
-cast 1 feel excitement;
-cast 1 the magical mojomuscular melody;
-cast 1 get big;
-cast 1 manicotti meditation;
-cast 1 Stevedave's Shanty of Superiority;
-Cast 1 sauce contemplation;
-Cast 1 Carol of the Thrills;
-Cast 1 Carol of the bulls;
-Cast 1 Seek out a bird;
-Cast 1 blood bond;
-Cast 1 leash of linguini;
-Cast 1 empathy of the newt;
-Cast 1 Singer's Faithful Ocelot;
-Cast 1 Astral Shell;
-Cast 1 Elemental Saucesphere;
-Cast 1 blood bubble;
-Cast 1 polka of plenty;
-equip powerful glove;
-cast 1 cheat code: triple size;
-beach head 10;
-beach head 11;
-equip off-hand familiar scrapbook;
-use 1 a ten-percent bonus;
-
-Create 1 ointment of the occult; 
-Create 1 tomato juice of powerful power;
-Use 1 ointment of the occult; 
-Use 1 tomato juice of powerful power;
-
-pillkeeper free familiar;
-pool aggressive;
-swim laps;
-
-mood cs;
-
-bastille myst;
-
-
-/*
--------------------------------------------
- Bastille - Draftsman, Myst, Bourgeoisie
- Daycare - scavenge
- Cook Pizza :
-	- Magical Ice Cubes
-	- Antique Packet of Ketchup
-	- Little Paper Umbrella
-	- 1952 Mickey Mantle Card	
-
--------------------------------------------
-*/
-
-eat 1 diabolic pizza;
-
-maximize mys, equip garbage shirt, equip familiar scrapbook, equip fourth of may, equip draftsman, equip backup camera;
-backupcamera ml;
-
-soak;
-
-reminisce witchess witch;
-
---------------------------
-// beat up witchess witch
---------------------------
-
-
-maximize mys, equip garbage shirt, equip familiar scrapbook, equip fourth of may, equip draftsman, equip battle broom, equip lil doctor bag;
-
-create 1 magical sausage;
-eat 1 magical sausage;
-
-/*
-----------------------------------------------------------------------------------------------
- Fight mushroom
- pick mushroom
- Go to NEP
- Reject quest
- Try and cast Feel Prides as late as possible, and make sure Familiar Scrapbook is equipped
-	- Equip lil’ doctor’s bag for banishes
-	- Turn 1 - NEP Monster – Reflex Hammer
-	- Turn 2 - NEP Monster – Reflex Hammer	
-	- Turn 3 - NEP Monster – Reflex Hammer	
-	- Remove lil’ Doctor’s bag, add hewn moon-rune spoon	
-	- Turn 4 - NEP Monster – Feel Hatred	
-	- Turn 5 - NEP Monster – Feel Hatred	
-	- Turn 6 - NEP Monster - Bowl Sideways, Feel Hatred	
-	- Turn 7 - Sausage Goblin - Micrometeor, Spittoon Monsoon, Attack	
-	- Eat 1 Magical Sausage	
-	- Turn 8 - NC - Head Upstairs, Tomes of Opportunity	
-	- Turn 9 - NEP Monster - Micrometeor, Spittoon Monsoon, Attack	
-	- Turn 10 - NEP Monster - Micrometeor, Spittoon Monsoon, Attack	
-	- Turn 11 - NEP Monster - Micrometeor, Spittoon Monsoon, Attack	
-	- Turn 12 - NEP Monster - Bowl Sideways, Snokebomb	
-	- Turn 13 - NEP Monster - Micrometeor, Spittoon Monsoon, Attack	
-	- Turn 14 - NEP Monster - Micrometeor, Spittoon Monsoon, Attack	
-	- Turn 15 - NEP Monster - Feel Pride, Micrometeor, Spittoon Monsoon, Attack	
-	- Turn 16 - NEP Monster - Feel Pride, Micrometeor, Spittoon Monsoon, Attack
-	- equip familiar scrapbook
-	- Turn 17 - NEP Monster - Feel Pride, Shattering Punch	
-	- Turn 18 - NEP Monster - Shattering Punch	
-	- Turn 19 - NEP Monster - Shattering Punch	
-	- Turn 20 - NEP Monster - Gingerbread Mob Hit
-----------------------------------------------------------------------------------------------
-*/
-
-create 1 oil of expertise;
-use 1 oil of expertise;
-mood apathetic;
-
-maximize mox;
-------------------
-// Do mox test (1)
-------------------
-
-maximize mus;
-------------------
-// Do mus test (1)
-// Do HP test (1)
-------------------
-
-maximize mys
-------------------
-// Do mys test (1)
-------------------
-
-familiar exotic parrot;
-equip snow suit;
-
-maximize hot res;
-
-equip fourth of may cosplay saber;
-equip industrial fire extinguisher;
-
-spacegate vaccine 1;
-cast 1 feel peaceful;
-beach head 1;
-
-/*
---------------------------------------
- Fight crate at noob cave
- cast meteor shower
- cast foam yourself
- use the force, find 2 and meet here
-
- Do hot res test (1)
---------------------------------------
-*/
-
-familiar disgeist;
-equip snow suit;
-buy 1 porkpie-mounted popper;
-create 1 shoe gum;
-use 1 shoe gum;
-cast 1 CHEAT CODE: Invisible Avatar;
-Cast 1 Feel Lonely;
-Cast 1 The Sonata of Sneakiness;
-Cast 1 Smooth Movement;
-use 1 shady shades;
-maximize -combat;
-genie effect disquiet riot;
-
-----------------------
-// do -combat test (1)
-----------------------
-
-cast 2 ode to booze;
-drink 6 astral pilsner;
-spoon platypus;
-maximize familiar weight;
-cast 1 empathy of the newt;
-use 1 silver face paint; 
-
-/*
---------------------------------------
- Fight crate at noob cave
- cast meteor shower
- use the force, find 2 and meet here
- Do familiar weight test (32)
---------------------------------------
-*/
-
-familiar exotic parrot;
-equip snow suit;
-maximize spooky res;
-cast 1 feel peaceful;
-cast 1 elemental saucesphere;
-cast 1 astral shell;
-soak;
-cast 1 deep dark visions;
-
-cast 1 cannelloni cocoon;
-reminisce ungulith;
-
-/*
------------------------------------------------------------------------------------------
- ungulith fight
- meteor shower
- use the force, drop your things
-----------------------------------------------------------------------------------------
-*/
-
-maximize weapon damage;
-boombox fists;
-use 1 corrupted marrow;
-use 1 yeg's motel toothbrush;
-cast 1 visit your favorite bird;
-cast 1 seek out a bird;
-cast 1 song of the north; 
-cast 1 carol of the bulls;
-cast 1 blood frenzy;
-cast 1 rage of the reindeer;
-cast 1 scowl of the auk;
-cast 1 blessing of the war snapper;
-hatter 9;
-beach head 6;
-pool aggressive;
-cast 1 bow-legged swagger;
-
--------------------------
-// do weapon dmg test (1)
--------------------------
-
-equip fourth of may cosplay saber;
-Cast 1 simmer;
-
-/*
---------------------------------------
- Fight crate at noob cave
- cast meteor shower
- use the force, find 2 and meet here
---------------------------------------
-*/
-
-cast 1 song of sauce;
-cast 1 carol of the hells;
-cast 1 arched eyebrow of the archmage;
-cast 1 spirit of cayenne;
-pool strategic;
-beach head 7;
-maximize spell damage;
-
----------------------
-// do spell test (34)
----------------------
-
-soak;
-hermit clover;
-use 1 clover;
-
-----------------------------------------
-// visit limerick dungeon & get eyedrops
-----------------------------------------
-
-use 1 cyclops eyedrops;
-equip vampyric cloake;
-equip fourth of may cosplay saber;
-familiar hovering sombrero;
-equip snow suit;
-equip off-hand familiar scrapbook;
-
-reminisce black crayon pirate;
-
-/*
----------------------------------
- black crayon pirate fight
- bowl straight up
- bat form
- attack
----------------------------------
-*/
-
-maximize item drop, -equip broken champagne bottle;
-cast 1 feel lost;
-cast 1 steely-eyed squint;
-genie effect infernal thirst;
-fortune buff item;
-cast 1 fat leon's phat loot lyric;
-cast 1 singer's faithful ocelot;
-cast 1 the spirit of taking; 
-use 1 bag of grain;
-genie effect frosty;
-
--------------------
-// do item test (1)
--------------------
-
------------------
-// final service
------------------
-
------------------------
-| Post-Run Stuff      |
------------------------
-
-/whitelist Alliance From Heck;
-unequip snow suit;
-stash put 1 snow suit;
-boombox meat;
-mood apathetic;
-pull all;
-use 1 cold medicine cabinet;
-buy 1 clockwork maid;
-use 1 clockwork maid;
-uneffect feeling lost;
-create 1 bitchin meatcar;
-breakfast;
-epicmall;
-philter;
-
-js setProperty("_locketMonstersFought", getProperty("_locketMonstersFought") + ",-1");
-
-
-
+/* global module */
+
+// load methods defined in mafia
+const {
+    autosell,
+    availableAmount,
+    cliExecute,
+    setProperty,
+    getProperty,
+	handlingChoice,
+    item,
+    visitUrl,
+    runChoice,
+    print,
+    printHtml,
+    wait
+} = require('kolmafia');
+
+const steps = {
+    /*
+    -------------------------------
+    | PRE-ASCENSION               |
+    -------------------------------
+    */
+    preAscension: function() {
+        cliExecute("/whitelist Alliance From Heck");
+        cliExecute("stash take 1 snow suit");
+        cliExecute("use 1 diabolic pizza cube");
+        cliExecute("/whitelist Old CW's Germ Free Clan");
+	
+	    
+	setProperty("_kdcs_next_step", "postAscension");
+        printHtml(`
+		<br>
+        	-------------------------------
+        	ASCEND Normal Community Service
+        	Blender, Pastamancer, Astral Trousers, Astral Pilsners
+        	--------------------------------
+		<br>
+        	Then run:
+		kdcs postAscension
+        `);
+    },
+
+    postAscension: function() {
+        
+        // vote at the voting booth
+        visitUrl("place.php?whichplace=town_right&action=townright_vote");
+        visitUrl("choice.php?option=1&whichchoice=1331&g=2&local%5B%5D=2&local%5B%5D=3");
+        visitUrl("place.php?whichplace=town_right&action=townright_vote");
+		
+        
+        //get consults 
+        cliExecute("fortune cwbot pizza batman thick");
+        wait(5);
+        cliExecute("fortune cwbot pizza batman thick");
+         wait(5);
+        cliExecute("fortune cwbot pizza batman thick");
+        
+        
+        // accept meatsmith quest
+        visitUrl('shop.php?whichshop=meatsmith&action=talk');
+        runChoice(1);
+
+        // visit the toot oriole
+        visitUrl("tutorial.php?action=toot");
+
+        cliExecute("use 1 letter from King Ralph XI");
+        cliExecute("use 1 pork elf goodies sack");
+     
+        autosell(availableAmount(Item.get("hamethyst")), Item.get("hamethyst"));
+        autosell(availableAmount(Item.get("baconstone")), Item.get("baconstone"));
+        
+        // sell all but 2 porqouises if we have 3 or more
+        if (availableAmount(Item.get("porquoise")) > 2) {
+        autosell(availableAmount(Item.get("porquoise"))-2, Item.get("porquoise"));
+        }
+        
+        // manual visit to fireworks shop to allow purchases
+        visitUrl('clan_viplounge.php?action=fwshop');    
+
+        cliExecute("buy using storage 1 borrowed time");
+        cliExecute("buy using storage 1 1952 Mickey Mantle card");
+        cliExecute("buy using storage 1 non-Euclidean angle");
+
+        cliExecute("pull 1 snow suit");
+        cliExecute("pull 1 borrowed time");
+        cliExecute("pull 1 non-Euclidean angle");
+        cliExecute("pull 1 1952 Mickey Mantle card");
+        cliExecute("Pull 1 staff of simmering hatred");
+
+        cliExecute("breakfast");
+        cliExecute("detective solver");
+        cliExecute("numberology 69");
+        cliExecute("saber familiar");
+        cliExecute("backupcamera reverser on");
+        cliExecute("backupcamera ml");
+        cliExecute("retrocape mysticality thrill");
+		
+        cliExecute("maximize mys, equip garbage shirt, equip familiar scrapbook, equip fourth of may")
+		
+		cliExecute("equip acc1 lil doctor");
+		cliExecute("equip acc2 eight days a week pill keeper");
+		cliExecute("equip acc3 hewn moon-rune spoon");
+		
+        cliExecute("cargo 284");
+        cliExecute("use 1 borrowed time");
+        cliExecute("use 1 bird-a-day calendar");
+        cliExecute("use 1 astral six-pack");
+        cliExecute("boombox meat");
+        cliExecute("autosell Newbiesport Tent");
+        cliExecute("create fish hatchet");
+        cliExecute("familiar plastic pirate skull");
+        cliExecute("equip miniature crystal ball");
+
+        cliExecute("buy 1 toy accordion");
+        cliExecute("buy 1 glittery mascara");
+        cliExecute("buy 1 dramatic range");
+        cliExecute("use 1 dramatic range");
+        cliExecute("acquire turtle totem");
+        cliExecute("acquire saucepan");
+		
+		
+		// get ready to map monsters!
+		cliExecute("/aa CS_MapMonsters");
+		
+		// Map Monster - Haunted Pantry - Possessed Can of Tomatoes 
+		cliExecute("cast 1 Map the Monsters");
+		visitUrl("adventure.php?snarfblat=113");
+		runChoice(1, "heyscriptswhatsupwinkwink=145");
+		
+		// Map Monster - Haunted Kitchen - Possessed Silverware Drawer
+		cliExecute("cast 1 Map the Monsters");
+		visitUrl("adventure.php?snarfblat=388");
+		runChoice(1, "heyscriptswhatsupwinkwink=372");
+		
+		// Map Monster - Skeleton Store – Novelty tropical skeleton
+		cliExecute("cast 1 Map the Monsters");
+		// Need to visit twice to get past initial NC
+		visitUrl("adventure.php?snarfblat=439");
+		visitUrl("adventure.php?snarfblat=439");
+		runChoice(1, "heyscriptswhatsupwinkwink=1746");
+
+	//let's grab that guaranteed sausage goblin
+	cliExecute("equip kramco sausage-o-matic");
+	cliExecute("/aa CS_Kills");
+	visitUrl("adventure.php?snarfblat=240");
+		
+        cliExecute("cast 1 advanced cocktailcrafting");
+        cliExecute("cast 1 advanced saucecrafting");
+        cliExecute("cast 1 eye and a twist");
+        cliExecute("maximize MP");
+
+		visitUrl("council.php");   
+		visitUrl("council.php"); 		
+		visitUrl("choice.php?whichchoice=1089&option=11");
+
+	setProperty("_kdcs_next_step", "buffs");
+	    
+        printHtml(`
+		
+		Did coil wire go ok?
+		Then run:
+		kdcs buffs`);
+    },
+
+	
+    buffs: function() {
+						
+        cliExecute("familiar hovering sombrero");
+        cliExecute("equip miniature crystal ball");
+		cliExecute("equip off-hand familiar scrapbook");
+
+        cliExecute("shower lukewarm");
+        cliExecute("cast 1 inscrutable gaze");
+        cliExecute("chew 1 non-Euclidean angle");
+        cliExecute("daycare mysticality");
+        cliExecute("telescope look high");
+        cliExecute("monorail");
+        cliExecute("use 1 votive of confidence");
+        cliExecute("use 1 glittery mascara");
+
+        cliExecute("cast 1 advanced cocktailcrafting");
+        cliExecute("cast 1 advanced saucecrafting");
+        cliExecute("cast 1 feel excitement");
+        cliExecute("cast 1 the magical mojomuscular melody");
+        cliExecute("cast 1 get big");
+        cliExecute("cast 1 manicotti meditation");
+        cliExecute("cast 1 Stevedave's Shanty of Superiority");
+        cliExecute("Cast 1 sauce contemplation");
+        cliExecute("Cast 1 Carol of the Thrills");
+        cliExecute("Cast 1 Carol of the bulls");
+        cliExecute("Cast 1 Seek out a bird");
+        cliExecute("Cast 1 blood bond");
+        cliExecute("Cast 1 leash of linguini");
+        cliExecute("Cast 1 empathy of the newt");
+        cliExecute("Cast 1 Singer's Faithful Ocelot");
+        cliExecute("Cast 1 Astral Shell");
+        cliExecute("Cast 1 Elemental Saucesphere");
+        cliExecute("Cast 1 blood bubble");
+        cliExecute("Cast 1 polka of plenty");
+        cliExecute("equip acc3 powerful glove");
+        cliExecute("cast 1 cheat code: triple size");
+        cliExecute("beach head 10");
+        cliExecute("beach head 11");
+        
+        cliExecute("use 1 a ten-percent bonus");
+
+        cliExecute("Create 1 ointment of the occult ");
+        cliExecute("Create 1 tomato juice of powerful power");
+        cliExecute("Use 1 ointment of the occult ");
+        cliExecute("Use 1 tomato juice of powerful power");
+
+        cliExecute("pillkeeper free familiar");
+        cliExecute("pool aggressive");
+        cliExecute("swim laps");
+
+        cliExecute("mood cs");
+        cliExecute("Bastille Myst");
+		
+		visitUrl("campground.php?action=makepizza&pizza=1008,2841,635,8404");
+		cliExecute("eat 1 diabolic pizza");
+
+		// Scavenge at daycare
+		visitUrl("place.php?whichplace=town_wrong&action=townwrong_boxingdaycare");
+		runChoice(3);
+		runChoice(2);
+
+        cliExecute("maximize mys, equip garbage shirt, equip familiar scrapbook, equip fourth of may")
+		
+		cliExecute("equip acc1 hewn moon-rune spoon");
+		cliExecute("equip acc2 draftsman");
+		cliExecute("equip acc3 backup camera");
+		
+        cliExecute("maximize mys, equip garbage shirt, equip familiar scrapbook, equip fourth of may, equip draftsman, equip backup camera");
+        cliExecute("backupcamera ml");
+
+        cliExecute("soak");
+
+		cliExecute("/aa CS_WitchessWitch");
+        cliExecute("reminisce witchess witch");
+		
+		cliExecute("/aa CS_Kills");
+		
+		visitUrl("adventure.php?snarfblat=543");
+		
+		visitUrl("adventure.php?snarfblat=543");
+		runChoice(2);
+		
+		cliExecute("equip acc1 lil doctor bag");
+        cliExecute("equip acc3 battle broom");
+		
+		cliExecute("create 1 magical sausage");
+		cliExecute("eat 1 magical sausage");
+	
+	
+		/*
+		
+		// NEP levelling
+		
+		cliExecute("equip acc1 lil doctor bag");
+		cliExecute("/aa NEP_Banishes");
+		visitUrl("adventure.php?snarfblat=528");
+		runChoice(2);
+		visitUrl("adventure.php?snarfblat=528");
+		visitUrl("adventure.php?snarfblat=528");
+		visitUrl("adventure.php?snarfblat=528");
+		cliExecute("equip acc1 hewn moon-rune spoon");
+		visitUrl("adventure.php?snarfblat=528");
+		visitUrl("adventure.php?snarfblat=528");
+		cliExecute("/aa NEP_BowlBanish");
+		visitUrl("adventure.php?snarfblat=528");
+		cliExecute("equip off-hand Kramco Sausage-o-Matic");
+		cliExecute("/aa CS_Kills");
+		visitUrl("adventure.php?snarfblat=528");
+		cliExecute("equip off-hand familiar scrapbook");
+		visitUrl("adventure.php?snarfblat=528");
+		runChoice(1);
+		runChoice(2);
+		visitUrl("adventure.php?snarfblat=528");
+		visitUrl("adventure.php?snarfblat=528");
+		visitUrl("adventure.php?snarfblat=528");
+		cliExecute("/aa NEP_BowlBanish");
+		visitUrl("adventure.php?snarfblat=528");
+		cliExecute("/aa CS_Kills");
+		visitUrl("adventure.php?snarfblat=528");
+		visitUrl("adventure.php?snarfblat=528");
+		visitUrl("adventure.php?snarfblat=528");
+		cliExecute("/aa NEP_PrideKills");
+		visitUrl("adventure.php?snarfblat=528");
+		runChoice(5);
+		visitUrl("adventure.php?snarfblat=528");
+		visitUrl("adventure.php?snarfblat=528");
+		cliExecute("/aa NEP_FreeKills");
+		visitUrl("adventure.php?snarfblat=528");
+		visitUrl("adventure.php?snarfblat=528");
+		visitUrl("adventure.php?snarfblat=528");
+		visitUrl("adventure.php?snarfblat=528");
+		*/
+	
+
+	setProperty("_kdcs_next_step", "mox");
+	    
+        printHtml(`
+		<br>	
+		// Equip Lil Doctor Bag
+    		// Go to NEP
+    		// Reject quest
+    		// Try and cast Feel Prides as late as possible, and make sure Familiar Scrapbook is equipped when you do.
+    		<br>
+   		Then run:
+		kdcs mox`);
+    },
+
+	
+    mox: function() {
+        cliExecute("create 1 oil of expertise");
+        cliExecute("use 1 oil of expertise");
+        cliExecute("mood apathetic");
+        cliExecute("maximize mox");
+
+	setProperty("_kdcs_next_step", "mus");
+	    
+        printHtml(`
+		<br>	
+    		// Do mox test (1)
+    		<br>
+    		Then run:
+		kdcs mus`)
+    },
+
+	
+    mus: function() {
+        cliExecute("maximize mus");
+
+	setProperty("_kdcs_next_step", "mys");
+	    
+        printHtml(`/
+		<br>	
+   		// Do mus test (1)
+    		// Do HP test (1)
+    		<br>
+    		Then run:
+		kdcs mys`);
+    },
+
+	
+    mys: function() {
+        cliExecute("maximize mys");
+
+	setProperty("_kdcs_next_step", "hot");
+	    
+        printHtml(`
+		<br>	
+    		// Do mys test (1)
+    		<br>
+    		Then run:
+		kdcs hot`);
+    },
+
+	
+    hot: function() {
+        
+	// go foam/mist/saber a crate
+        cliExecute("equip fourth of may cosplay saber");
+        cliExecute("equip industrial fire extinguisher");
+    	cliExecute("equip vampyric cloake");
+		setProperty("choiceAdventure1387",2);
+		cliExecute("/aa CS_HotResPrep");
+		
+		visitUrl("adventure.php?snarfblat=240");
+		if (handlingChoice()) runChoice(-1);
+	    
+		cliExecute("familiar exotic parrot");
+        cliExecute("equip snow suit");
+        cliExecute("spacegate vaccine 1");
+        cliExecute("cast 1 feel peaceful");
+		cliExecute("cast 1 astral shell");
+		cliExecute("cast 1 elemental saucesphere");
+        cliExecute("beach head 1");
+		cliExecute("maximize hot res");
+
+	setProperty("_kdcs_next_step", "noncombat");
+	    
+        printHtml(`
+		<br>
+    		// Do hot res test (1)
+    		<br>
+   		Then run:
+		kdcs noncombat`);
+    },
+
+	
+    noncombat: function() {
+        cliExecute("familiar disgeist");
+        cliExecute("equip snow suit");
+        cliExecute("buy 1 porkpie-mounted popper");
+        cliExecute("create 1 shoe gum");
+        cliExecute("use 1 shoe gum");
+        cliExecute("cast 1 CHEAT CODE: Invisible Avatar");
+        cliExecute("Cast 1 Feel Lonely");
+        cliExecute("Cast 1 The Sonata of Sneakiness");
+        cliExecute("Cast 1 Smooth Movement");
+        cliExecute("use 1 shady shades");
+        cliExecute("maximize -combat");
+        cliExecute("genie effect disquiet riot");
+
+	setProperty("_kdcs_next_step", "fam");
+	    
+        printHtml(`<br>
+    		// do -combat test (1)
+    		<br>
+    		Then run:
+		kdcs fam`);
+    },
+
+	
+    fam: function() {
+        cliExecute("cast 2 ode to booze");
+        cliExecute("drink 6 astral pilsner");
+        cliExecute("spoon platypus");
+        cliExecute("maximize familiar weight");
+        cliExecute("cast 1 empathy of the newt");
+        cliExecute("use 1 silver face paint ");
+
+	// go shower/saber a crate
+	cliExecute("equip fourth of may cosplay saber");
+	setProperty("choiceAdventure1387",2);
+	cliExecute("/aa CS_ShowerSaber");
+	visitUrl("adventure.php?snarfblat=240");
+	if (handlingChoice()) runChoice(-1);
+
+	setProperty("_kdcs_next_step", "weapon");
+	    
+        printHtml(`
+		<br>
+		// Do familiar weight test (32)
+		<br>
+		Then run:
+		kdcs weapon`);
+    },
+
+	
+    weapon: function() {
+        cliExecute("familiar exotic parrot");
+        cliExecute("equip snow suit");
+        cliExecute("maximize spooky res");
+        cliExecute("cast 1 feel peaceful");
+        cliExecute("cast 1 elemental saucesphere");
+        cliExecute("cast 1 astral shell");
+        cliExecute("soak");
+        cliExecute("cast 1 deep dark visions");
+        cliExecute("cast 1 cannelloni cocoon");
+
+	// go shower/saber an Ungulith
+	cliExecute("equip fourth of may cosplay saber");
+	cliExecute("/aa CS_ShowerSaber");
+	setProperty("choiceAdventure1387", 3)
+        cliExecute("reminisce ungulith");
+		if (handlingChoice()) runChoice(-1);
+
+        cliExecute("maximize weapon damage");
+        cliExecute("boombox fists");
+        cliExecute("use 1 corrupted marrow");
+        cliExecute("use 1 yeg's motel toothbrush");
+        cliExecute("cast 1 visit your favorite bird");
+        cliExecute("cast 1 seek out a bird");
+        cliExecute("cast 1 song of the north ");
+        cliExecute("cast 1 carol of the bulls");
+        cliExecute("cast 1 blood frenzy");
+        cliExecute("cast 1 rage of the reindeer");
+        cliExecute("cast 1 scowl of the auk");
+        cliExecute("cast 1 blessing of the war snapper");
+        cliExecute("acquire 1 disco mask");
+        cliExecute("hatter 9");
+        cliExecute("beach head 6");
+        cliExecute("pool aggressive");
+        cliExecute("cast 1 bow-legged swagger");
+
+	setProperty("_kdcs_next_step", "spell");
+	    
+        printHtml(`
+        	<br>
+		// do weapon dmg test (1)
+        	<br>
+        	Then run:
+		kdcs spell`);
+    },
+	
+	
+    spell: function() {
+        
+        cliExecute("Cast 1 simmer");
+		
+	// go shower/saber a crate
+ 	cliExecute("equip fourth of may cosplay saber");
+	setProperty("choiceAdventure1387",2);
+	cliExecute("/aa CS_ShowerSaber");
+	visitUrl("adventure.php?snarfblat=240");
+	if (handlingChoice()) runChoice(-1);
+		
+        cliExecute("cast 1 song of sauce");
+        cliExecute("cast 1 carol of the hells");
+        cliExecute("cast 1 arched eyebrow of the archmage");
+        cliExecute("cast 1 spirit of cayenne");
+        cliExecute("pool strategic");
+        cliExecute("beach head 7");
+        cliExecute("maximize spell damage");
+
+	setProperty("_kdcs_next_step", "item");
+	    
+        printHtml(`
+		<br>
+            // do spell test (34)
+           <br>
+            Then run:
+	   kdcs item`);
+    },
+    item: function() {
+        cliExecute("soak");
+        cliExecute("hermit clover");
+        cliExecute("use 1 clover");
+	
+	// go get the cylcops eyedrops
+	visitUrl('adventure.php?snarfblat=19');
+		
+        cliExecute("use 1 cyclops eyedrops");
+        cliExecute("equip vampyric cloake");
+        cliExecute("equip fourth of may cosplay saber");
+        cliExecute("familiar hovering sombrero");
+        cliExecute("equip snow suit");
+        cliExecute("equip off-hand familiar scrapbook");
+
+	// set auto-attack to bowl straight up, cast bat form and attack
+	cliExecute("/aa CS_BlackCrayonPirate");
+        cliExecute("reminisce black crayon pirate");
+	    
+        cliExecute("maximize item drop, -equip broken champagne bottle");
+        cliExecute("cast 1 feel lost");
+        cliExecute("cast 1 steely-eyed squint");
+        cliExecute("genie effect infernal thirst");
+        cliExecute("fortune buff item");
+        cliExecute("cast 1 fat leon's phat loot lyric");
+        cliExecute("cast 1 singer's faithful ocelot");
+        cliExecute("cast 1 the spirit of taking ");
+        cliExecute("use 1 bag of grain");
+        cliExecute("genie effect frosty");
+
+	setProperty("_kdcs_next_step", "postRun");
+	    
+        printHtml(`
+		<br>
+		// do item test (1)
+		<br>
+		// final service
+		<br>
+		Then run:
+		kdcs postRun`);
+    },
+
+    /*
+    -----------------------
+    | Post-Run Stuff      |
+    -----------------------
+    */
+	
+    postRun: function() {
+        cliExecute("/whitelist Alliance From Heck");
+        cliExecute("unequip snow suit");
+        cliExecute("stash put 1 snow suit");
+		
+        cliExecute("boombox meat");
+        cliExecute("mood apathetic");
+        cliExecute("pull all");
+        cliExecute("use 1 cold medicine cabinet");
+        cliExecute("buy 1 clockwork maid");
+        cliExecute("use 1 clockwork maid");
+        cliExecute("uneffect feeling lost");
+        cliExecute("create 1 bitchin meatcar");
+        cliExecute("breakfast");
+        cliExecute("epicmall");
+        cliExecute("philter");
+
+        setProperty("_locketMonstersFought", getProperty("_locketMonstersFought") + ",-1");
+    }
+};
+
+function main(step) {
+    // See if the passed in step matches any of the functions named in the steps object
+    if (steps.hasOwnProperty(step)) {
+        // if a valid step was passed in, call the corresponding method
+        steps[step]();
+    } else {
+        print(`Unrecognized step '${step}'`, 'red');
+    }
+}
+
+// make sure mafia knows what function to call
+module.exports.main = main;
