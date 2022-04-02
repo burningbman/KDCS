@@ -151,6 +151,9 @@ const steps = {
         cliExecute("cast 1 eye and a twist");
         cliExecute("maximize MP");
 
+	if (!userConfirm('About to coil wire. Continue?')) {
+        throw 'Aborting before coiling wire';
+    }
 		visitUrl("council.php");   
 		visitUrl("council.php"); 		
 		visitUrl("choice.php?whichchoice=1089&option=11");
@@ -253,8 +256,17 @@ const steps = {
 		cliExecute("create 1 magical sausage");
 		cliExecute("eat 1 magical sausage");
 	
+		setProperty("_kdcs_next_step", "levelling");
+	    
+        printHtml(`
+		<br>	
+		
+   		Then run:
+		kdcs levelling`);
+    },
 	
-		/*
+		
+    levelling: function() {			
 		
 		// NEP levelling
 		
@@ -296,18 +308,14 @@ const steps = {
 		visitUrl("adventure.php?snarfblat=528");
 		visitUrl("adventure.php?snarfblat=528");
 		visitUrl("adventure.php?snarfblat=528");
-		*/
-	
+
 
 	setProperty("_kdcs_next_step", "mox");
 	    
         printHtml(`
 		<br>	
-		// Equip Lil Doctor Bag
-    		// Go to NEP
-    		// Reject quest
-    		// Try and cast Feel Prides as late as possible, and make sure Familiar Scrapbook is equipped when you do.
-    		<br>
+		// Are you levelled up enough?
+		<br>
    		Then run:
 		kdcs mox`);
     },
@@ -361,13 +369,13 @@ const steps = {
 	
     hot: function() {
         
-	// go foam/mist/saber a crate
         cliExecute("equip fourth of may cosplay saber");
         cliExecute("equip industrial fire extinguisher");
     	cliExecute("equip vampyric cloake");
+
+		// go foam/mist/saber a crate
 		setProperty("choiceAdventure1387",2);
 		cliExecute("/aa CS_HotResPrep");
-		
 		visitUrl("adventure.php?snarfblat=240");
 		if (handlingChoice()) runChoice(-1);
 	    
