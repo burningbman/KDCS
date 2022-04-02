@@ -96,7 +96,13 @@ const steps = {
         cliExecute("backupcamera reverser on");
         cliExecute("backupcamera ml");
         cliExecute("retrocape mysticality thrill");
-        cliExecute("maximize mys, equip garbage shirt, equip familiar scrapbook, equip fourth of may, equip lil doctor, equip eight days a week pill keeper");
+		
+        cliExecute("maximize mys, equip garbage shirt, equip familiar scrapbook, equip fourth of may")
+		
+		cliExecute("equip acc1 lil doctor");
+		cliExecute("equip acc2 eight days a week pill keeper");
+		cliExecute("equip acc3 hewn moon-rune spoon");
+		
         cliExecute("cargo 284");
         cliExecute("use 1 borrowed time");
         cliExecute("use 1 bird-a-day calendar");
@@ -115,10 +121,7 @@ const steps = {
         cliExecute("acquire saucepan");
 		
 		
-
-		
 		// get ready to map monsters!
-		cliExecute("equip lil doctor bag");
 		cliExecute("/aa CS_MapMonsters");
 		
 		// Map Monster - Haunted Pantry - Possessed Can of Tomatoes 
@@ -163,10 +166,12 @@ const steps = {
         cliExecute("cast 1 advanced saucecrafting");
         cliExecute("cast 1 eye and a twist");
         cliExecute("maximize MP");
-        cliExecute("Council");
 		
-		// visitUrl("choice.php?whichchoice=1089&option=11");
+		// do the coil wire
+		visitUrl("council.php");    
+		visitUrl("choice.php?whichchoice=1089&option=11");
 
+		/*
 	setProperty("_kdcs_next_step", "buffs");
 	    
         printHtml(`
@@ -179,8 +184,11 @@ const steps = {
 
 	
     buffs: function() {
+		*/
+		
         cliExecute("familiar hovering sombrero");
         cliExecute("equip miniature crystal ball");
+		cliExecute("equip off-hand familiar scrapbook");
 
         cliExecute("shower lukewarm");
         cliExecute("cast 1 inscrutable gaze");
@@ -210,11 +218,11 @@ const steps = {
         cliExecute("Cast 1 Elemental Saucesphere");
         cliExecute("Cast 1 blood bubble");
         cliExecute("Cast 1 polka of plenty");
-        cliExecute("equip powerful glove");
+        cliExecute("equip acc3 powerful glove");
         cliExecute("cast 1 cheat code: triple size");
         cliExecute("beach head 10");
         cliExecute("beach head 11");
-        cliExecute("equip off-hand familiar scrapbook");
+        
         cliExecute("use 1 a ten-percent bonus");
 
         cliExecute("Create 1 ointment of the occult ");
@@ -236,6 +244,12 @@ const steps = {
 		visitUrl("place.php?whichplace=town_wrong&action=townwrong_boxingdaycare");
 		runChoice(3);
 		runChoice(2);
+
+        cliExecute("maximize mys, equip garbage shirt, equip familiar scrapbook, equip fourth of may")
+		
+		cliExecute("equip acc1 hewn moon-rune spoon");
+		cliExecute("equip acc2 draftsman");
+		cliExecute("equip acc3 backup camera");
 		
         cliExecute("maximize mys, equip garbage shirt, equip familiar scrapbook, equip fourth of may, equip draftsman, equip backup camera");
         cliExecute("backupcamera ml");
@@ -252,23 +266,57 @@ const steps = {
 		visitUrl("adventure.php?snarfblat=543");
 		runChoice(2);
 		
-
-	/*
-        printHtml(`
-    		<br>
-    		// beat up witchess witch
-    		<br>
-   		Then run:
-		kdcs preMushroom`)
-    },
-
-    preMushroom: function() {		
-	*/
-
-        cliExecute("maximize mys, equip garbage shirt, equip familiar scrapbook, equip fourth of may, equip draftsman, equip battle broom, equip hewn moon-rune spoon");
+		cliExecute("equip acc1 lil doctor bag");
+        cliExecute("equip acc3 battle broom");
 		
-	cliExecute("create 1 magical sausage");
-	cliExecute("eat 1 magical sausage");
+		cliExecute("create 1 magical sausage");
+		cliExecute("eat 1 magical sausage");
+	
+	
+		/*
+		
+		// NEP levelling
+		
+		cliExecute("equip acc1 lil doctor bag");
+		cliExecute("/aa NEP_Banishes");
+		visitUrl("adventure.php?snarfblat=528");
+		runChoice(2);
+		visitUrl("adventure.php?snarfblat=528");
+		visitUrl("adventure.php?snarfblat=528");
+		visitUrl("adventure.php?snarfblat=528");
+		cliExecute("equip acc1 hewn moon-rune spoon");
+		visitUrl("adventure.php?snarfblat=528");
+		visitUrl("adventure.php?snarfblat=528");
+		cliExecute("/aa NEP_BowlBanish");
+		visitUrl("adventure.php?snarfblat=528");
+		cliExecute("equip off-hand Kramco Sausage-o-Matic");
+		cliExecute("/aa CS_Kills");
+		visitUrl("adventure.php?snarfblat=528");
+		cliExecute("equip off-hand familiar scrapbook");
+		visitUrl("adventure.php?snarfblat=528");
+		runChoice(1);
+		runChoice(2);
+		visitUrl("adventure.php?snarfblat=528");
+		visitUrl("adventure.php?snarfblat=528");
+		visitUrl("adventure.php?snarfblat=528");
+		cliExecute("/aa NEP_BowlBanish");
+		visitUrl("adventure.php?snarfblat=528");
+		cliExecute("/aa CS_Kills");
+		visitUrl("adventure.php?snarfblat=528");
+		visitUrl("adventure.php?snarfblat=528");
+		visitUrl("adventure.php?snarfblat=528");
+		cliExecute("/aa NEP_PrideKills");
+		visitUrl("adventure.php?snarfblat=528");
+		runChoice(5);
+		visitUrl("adventure.php?snarfblat=528");
+		visitUrl("adventure.php?snarfblat=528");
+		cliExecute("/aa NEP_FreeKills");
+		visitUrl("adventure.php?snarfblat=528");
+		visitUrl("adventure.php?snarfblat=528");
+		visitUrl("adventure.php?snarfblat=528");
+		visitUrl("adventure.php?snarfblat=528");
+		*/
+	
 
 	setProperty("_kdcs_next_step", "mox");
 	    
