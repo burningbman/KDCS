@@ -631,6 +631,7 @@ const steps = {
 	*/
 	
 	postRun: function() {
+		cliExecute("/aa disabled");
 		cliExecute("/whitelist Alliance From Heck");
 		cliExecute("unequip snow suit");
 		cliExecute("stash put 1 snow suit");
