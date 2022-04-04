@@ -48,7 +48,7 @@ const steps = {
 		visitUrl("council.php");
 		
 		// Turn off Lil' Doctor quests
-		setProperty(choiceAdventure1340, 3");
+		setProperty("choiceAdventure1340, 3");
 		
 		// set backup camera stuff
 		cliExecute("backupcamera reverser on");
