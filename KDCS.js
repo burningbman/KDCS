@@ -13,6 +13,7 @@ const {
 	runChoice,
 	print,
 	printHtml,
+	userConfirm,
 	wait
 } = require('kolmafia');
 
@@ -48,7 +49,10 @@ const steps = {
 		visitUrl("council.php");
 		
 		// Turn off Lil' Doctor quests
-		setProperty("choiceAdventure1340, 3");
+		// setProperty("choiceAdventure1340,3");
+		
+		// manual visit to fireworks shop to allow purchases
+		visitUrl("clan_viplounge.php?action=fwshop");
 		
 		// set backup camera stuff
 		cliExecute("backupcamera reverser on");
@@ -173,19 +177,12 @@ const steps = {
 	if (!userConfirm('About to coil wire. Continue?')) {
 		throw 'Aborting before coiling wire';
 	}
-
 		visitUrl("council.php");
 		visitUrl("choice.php?whichchoice=1089&option=11");
+		
+		setProperty("_kdcs_next_step", "buffs");
 
-	setProperty("_kdcs_next_step", "buffs");
-		
-		printHtml(`
-		
-		Did coil wire go ok?
-		Then run:
-		kdcs buffs`);
 	},
-
 	
 	buffs: function() {
 						
@@ -222,10 +219,6 @@ const steps = {
 		cliExecute("Use 1 tomato juice of powerful power");
 		cliExecute("pool aggressive");
 		cliExecute("swim laps");
-		
-		if (!userConfirm('About to use our non-replaceable buffs. Continue?')) {
-		throw 'Aborting before using non-replaceables';
-	}	
 		
 		// non replaceable buffs and +exp stuff ahead of getting stats
 		cliExecute("beach head 10");
@@ -273,6 +266,8 @@ const steps = {
 		visitUrl("adventure.php?snarfblat=543");
 		visitUrl("adventure.php?snarfblat=543");
 		runChoice(2);
+		cliExecute("Use 1 free-range mushroom");
+		
 		
 		cliExecute("equip acc1 lil doctor bag");
 		cliExecute("equip acc3 battle broom");
@@ -283,9 +278,7 @@ const steps = {
 		setProperty("_kdcs_next_step", "levelling");
 		
 		printHtml(`
-		<br>	
-		
-		Then run:
+		Next step: 
 		kdcs levelling`);
 	},
 	
@@ -294,45 +287,73 @@ const steps = {
 		
 		// NEP levelling
 		
-		cliExecute("equip acc1 lil doctor bag");
-		cliExecute("/aa NEP_Banishes");
+		// Visit the party and reject the quest
 		visitUrl("adventure.php?snarfblat=528");
 		runChoice(2);
+		
+		
+		
+		// first stage - do some banishes
+		cliExecute("equip acc1 lil doctor bag");
+		cliExecute("/aa NEP_Banishes");
+		
+		// first five banishes (Reflex Hammer, Feel Hatred)
 		visitUrl("adventure.php?snarfblat=528");
 		visitUrl("adventure.php?snarfblat=528");
 		visitUrl("adventure.php?snarfblat=528");
-		cliExecute("equip acc1 hewn moon-rune spoon");
 		visitUrl("adventure.php?snarfblat=528");
 		visitUrl("adventure.php?snarfblat=528");
+		
+		// bowl sideways before next banish 
 		cliExecute("/aa NEP_BowlBanish");
 		visitUrl("adventure.php?snarfblat=528");
+		
+		// put the spoon back on & fight a sausage goblin
+		cliExecute("equip acc1 hewn moon-rune spoon");
 		cliExecute("equip off-hand Kramco Sausage-o-Matic");
 		cliExecute("/aa CS_Kills");
 		visitUrl("adventure.php?snarfblat=528");
+		
+		// put the familiar scrapbook on for more exp
 		cliExecute("equip off-hand familiar scrapbook");
+		
+		// this should be the NC, get Tomes of Opportunity
 		visitUrl("adventure.php?snarfblat=528");
 		runChoice(1);
 		runChoice(2);
+		
+		// do a few regular kills with bowl sideways active
 		visitUrl("adventure.php?snarfblat=528");
 		visitUrl("adventure.php?snarfblat=528");
 		visitUrl("adventure.php?snarfblat=528");
+		
+		// bowling ball comes back, so we bowl and banish again
 		cliExecute("/aa NEP_BowlBanish");
 		visitUrl("adventure.php?snarfblat=528");
+		
+		
+		// back to regular kills with bowl sideways active
 		cliExecute("/aa CS_Kills");
 		visitUrl("adventure.php?snarfblat=528");
 		visitUrl("adventure.php?snarfblat=528");
 		visitUrl("adventure.php?snarfblat=528");
-		cliExecute("/aa NEP_PrideKills");
+		
+		// the NC should be up again
 		visitUrl("adventure.php?snarfblat=528");
 		runChoice(5);
+		
+		// bowl sideways is running out so do your feel prides
+		cliExecute("/aa NEP_PrideKills");
 		visitUrl("adventure.php?snarfblat=528");
 		visitUrl("adventure.php?snarfblat=528");
+		
+		// bowl sideways has run out and so have free NEP fights so do your free kills 
 		cliExecute("/aa NEP_FreeKills");
 		visitUrl("adventure.php?snarfblat=528");
 		visitUrl("adventure.php?snarfblat=528");
 		visitUrl("adventure.php?snarfblat=528");
 		visitUrl("adventure.php?snarfblat=528");
-
+		cliExecute("/aa disabled");
 
 	setProperty("_kdcs_next_step", "mox");
 		
@@ -393,8 +414,9 @@ const steps = {
 	
 	hot: function() {
 		
-		cliExecute("equip fourth of may cosplay saber");
-		cliExecute("equip industrial fire extinguisher");
+		cliExecute("equip weapon industrial fire extinguisher");
+		cliExecute("equip off-hand fourth of may cosplay saber");
+
 		cliExecute("equip vampyric cloake");
 
 		// go foam/mist/saber a crate
@@ -406,6 +428,8 @@ const steps = {
 		
 		cliExecute("familiar exotic parrot");
 		cliExecute("equip snow suit");
+		cliExecute("equip unwrapped knock-off retro superhero cape");
+		cliExecute("retrocape vampire hold");
 		cliExecute("spacegate vaccine 1");
 		cliExecute("cast 1 feel peaceful");
 		cliExecute("cast 1 astral shell");
@@ -495,9 +519,9 @@ const steps = {
 		cliExecute("cast 1 cannelloni cocoon");
 
 	// go shower/saber an Ungulith
-	cliExecute("equip fourth of may cosplay saber");
-	cliExecute("/aa CS_ShowerSaber");
-	setProperty("choiceAdventure1387", 3)
+		cliExecute("equip fourth of may cosplay saber");
+		cliExecute("/aa CS_ShowerSaber");
+		setProperty("choiceAdventure1387", 3)
 		cliExecute("reminisce ungulith");
 		if (handlingChoice()) runChoice(-1);
 
