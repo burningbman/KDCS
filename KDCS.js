@@ -355,6 +355,7 @@ const steps = {
 		cliExecute("/aa NEP_PrideKills");
 		visitUrl("adventure.php?snarfblat=528");
 		visitUrl("adventure.php?snarfblat=528");
+		visitUrl("adventure.php?snarfblat=528");
 		
 		// bowl sideways has run out and so have free NEP fights so do your free kills 
 		cliExecute("/aa NEP_FreeKills");
