@@ -137,13 +137,6 @@ const steps = {
 		cliExecute("familiar plastic pirate skull");
 		cliExecute("equip miniature crystal ball");
 
-		cliExecute("buy 1 toy accordion");
-		cliExecute("buy 1 glittery mascara");
-		cliExecute("buy 1 dramatic range");
-		cliExecute("use 1 dramatic range");
-		cliExecute("acquire turtle totem");
-		cliExecute("acquire saucepan");
-		
 		// get ready to map monsters!
 		cliExecute("/aa CS_MapMonsters");
 		
@@ -169,10 +162,26 @@ const steps = {
 		cliExecute("/aa CS_Kills");
 		visitUrl("adventure.php?snarfblat=240");
 		
+		// sell the stuff we don't need to ensure we have funds for buying stuff
+		autosell(availableAmount(Item.get("lemon")), Item.get("lemon"));
+		autosell(availableAmount(Item.get("strawberry")), Item.get("strawberry"));
+		autosell(availableAmount(Item.get("orange")), Item.get("orange"));
+		autosell(availableAmount(Item.get("coconut shell")-1), Item.get("coconut shell"));
+		autosell(availableAmount(Item.get("eggbeater")), Item.get("eggbeater"));
+		autosell(availableAmount(Item.get("corn holder")), Item.get("corn holder"));
+
+		cliExecute("buy 1 toy accordion");
+		cliExecute("buy 1 glittery mascara");
+		cliExecute("buy 1 dramatic range");
+		cliExecute("use 1 dramatic range");
+		cliExecute("acquire turtle totem");
+		cliExecute("acquire saucepan");
+		
 		cliExecute("cast 1 advanced cocktailcrafting");
 		cliExecute("cast 1 advanced saucecrafting");
 		cliExecute("cast 1 eye and a twist");
 		cliExecute("maximize MP");
+		
 
 	if (!userConfirm('About to coil wire. Continue?')) {
 		throw 'Aborting before coiling wire';
@@ -244,13 +253,14 @@ const steps = {
 		runChoice(3);
 		runChoice(2);
 
-		cliExecute("maximize mys, equip garbage shirt, equip familiar scrapbook, equip fourth of may")
-		
+		cliExecute("maximize mys, equip garbage shirt, equip fourth of may")
+		cliExecute("equip off-hand familiar scrapbook");
 		cliExecute("equip acc1 hewn moon-rune spoon");
 		cliExecute("equip acc2 draftsman");
 		cliExecute("equip acc3 backup camera");
 		
-		cliExecute("maximize mys, equip garbage shirt, equip familiar scrapbook, equip fourth of may, equip draftsman, equip backup camera");
+		cliExecute("maximize mys, equip garbage shirt, equip fourth of may, equip draftsman, equip backup camera");
+		
 		cliExecute("backupcamera ml");
 		
 		cliExecute("mood cs");
@@ -292,7 +302,6 @@ const steps = {
 		runChoice(2);
 		
 		
-		
 		// first stage - do some banishes
 		cliExecute("equip acc1 lil doctor bag");
 		cliExecute("/aa NEP_Banishes");
@@ -331,7 +340,7 @@ const steps = {
 		cliExecute("/aa NEP_BowlBanish");
 		visitUrl("adventure.php?snarfblat=528");
 		
-		
+
 		// back to regular kills with bowl sideways active
 		cliExecute("/aa CS_Kills");
 		visitUrl("adventure.php?snarfblat=528");
@@ -394,9 +403,22 @@ const steps = {
 			// Do HP test (1)
 			<br>
 			Then run:
-		kdcs mys`);
+		kdcs hp`);
 	},
 
+	hp: function() {
+		cliExecute("maximize hp");
+
+	setProperty("_kdcs_next_step", "mys");
+		
+		printHtml(`/
+		<br>	
+		// Do mus test (1)
+			// Do HP test (1)
+			<br>
+			Then run:
+		kdcs mys`);
+	},
 	
 	mys: function() {
 		cliExecute("maximize mys");
@@ -425,6 +447,7 @@ const steps = {
 		cliExecute("/aa CS_HotResPrep");
 		visitUrl("adventure.php?snarfblat=240");
 		if (handlingChoice()) runChoice(-1);
+		
 		
 		cliExecute("familiar exotic parrot");
 		cliExecute("equip snow suit");
