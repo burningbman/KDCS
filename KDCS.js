@@ -381,6 +381,12 @@ const steps = {
 		cliExecute("mood apathetic");
 		cliExecute("maximize mox");
 		
+		if (!userConfirm('About to run Moxie test. Continue?')) {
+		throw 'Aborting before doing Moxie test.';
+	}
+		visitUrl("council.php");
+		visitUrl("choice.php?whichchoice=1089&option=4");
+		
 	setProperty("_kdcs_next_step", "mus");
 		
 		printHtml(`
@@ -395,12 +401,17 @@ const steps = {
 	mus: function() {
 		cliExecute("maximize mus");
 
+		if (!userConfirm('About to run Muscle test. Continue?')) {
+		throw 'Aborting before doing Muscle test.';
+	}
+		visitUrl("council.php");
+		visitUrl("choice.php?whichchoice=1089&option=2");
+
 	setProperty("_kdcs_next_step", "mys");
 		
 		printHtml(`/
 		<br>	
 		// Do mus test (1)
-			// Do HP test (1)
 			<br>
 			Then run:
 		kdcs hp`);
@@ -408,6 +419,13 @@ const steps = {
 
 	hp: function() {
 		cliExecute("maximize hp");
+		
+		if (!userConfirm('About to run HP test. Continue?')) {
+		throw 'Aborting before doing HP test.';
+	}
+		visitUrl("council.php");
+		visitUrl("choice.php?whichchoice=1089&option=1");
+
 
 	setProperty("_kdcs_next_step", "mys");
 		
@@ -422,6 +440,12 @@ const steps = {
 	
 	mys: function() {
 		cliExecute("maximize mys");
+		
+		if (!userConfirm('About to run Mysticality test. Continue?')) {
+		throw 'Aborting before doing Mysticality test.';
+	}
+		visitUrl("council.php");
+		visitUrl("choice.php?whichchoice=1089&option=3");
 
 	setProperty("_kdcs_next_step", "hot");
 		
@@ -460,14 +484,11 @@ const steps = {
 		cliExecute("beach head 1");
 		cliExecute("maximize hot res");
 		
-		/*
-		if (!userConfirm('About to do hot res test. Continue?')) {
-		throw 'Aborting before hot res test';
+		if (!userConfirm('About to do Hot Resistance test. Continue?')) {
+		throw 'Aborting before Hot Resistance test.';
 	}
 		visitUrl("council.php");
 		visitUrl("choice.php?whichchoice=1089&option=10");
-		*/
-
 
 	setProperty("_kdcs_next_step", "noncombat");
 		
@@ -493,6 +514,12 @@ const steps = {
 		cliExecute("use 1 shady shades");
 		cliExecute("maximize -combat");
 		cliExecute("genie effect disquiet riot");
+		
+		if (!userConfirm('About to do Non Combat test. Continue?')) {
+		throw 'Aborting before Non Combat test.';
+	}
+		visitUrl("council.php");
+		visitUrl("choice.php?whichchoice=1089&option=8");
 
 	setProperty("_kdcs_next_step", "fam");
 		
@@ -518,6 +545,12 @@ const steps = {
 	cliExecute("/aa CS_ShowerSaber");
 	visitUrl("adventure.php?snarfblat=240");
 	if (handlingChoice()) runChoice(-1);
+	
+	if (!userConfirm('About to do Familiar Weight test. Continue?')) {
+		throw 'Aborting before Familiar Weight test.';
+	}
+		visitUrl("council.php");
+		visitUrl("choice.php?whichchoice=1089&option=5");
 
 	setProperty("_kdcs_next_step", "weapon");
 		
@@ -565,8 +598,14 @@ const steps = {
 		cliExecute("beach head 6");
 		cliExecute("pool aggressive");
 		cliExecute("cast 1 bow-legged swagger");
+		
+		if (!userConfirm('About to do Weapon Damage test. Continue?')) {
+		throw 'Aborting before Weapon Damage test.';
+	}
+		visitUrl("council.php");
+		visitUrl("choice.php?whichchoice=1089&option=6");
 
-	setProperty("_kdcs_next_step", "spell");
+		setProperty("_kdcs_next_step", "spell");
 		
 		printHtml(`
 			<br>
@@ -596,7 +635,15 @@ const steps = {
 		cliExecute("beach head 7");
 		cliExecute("maximize spell damage");
 
-	setProperty("_kdcs_next_step", "item");
+
+		if (!userConfirm('About to do Spell Damage test. Continue?')) {
+		throw 'Aborting before Spell Damage test.';
+	}
+	
+		visitUrl("council.php");
+		visitUrl("choice.php?whichchoice=1089&option=7");	
+		
+		setProperty("_kdcs_next_step", "item");
 		
 		printHtml(`
 		<br>
@@ -634,6 +681,18 @@ const steps = {
 		cliExecute("cast 1 the spirit of taking ");
 		cliExecute("use 1 bag of grain");
 		cliExecute("genie effect frosty");
+		
+		if (!userConfirm('About to do Item Drop test. Continue?')) {
+		throw 'Aborting before Item Drop test.';
+	}
+		visitUrl("council.php");
+		visitUrl("choice.php?whichchoice=1089&option=9");
+		
+		if (!userConfirm('Donate your body to science?')) {
+		throw 'Aborting before Final Service.';
+	}
+		visitUrl("council.php");
+		visitUrl("choice.php?whichchoice=1089&option=30");
 
 	setProperty("_kdcs_next_step", "postRun");
 		
