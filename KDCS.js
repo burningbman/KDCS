@@ -2,6 +2,7 @@
 
 // load methods defined in mafia
 const {
+	adv1,
 	autosell,
 	availableAmount,
 	cliExecute,
@@ -9,6 +10,7 @@ const {
 	getProperty,
 	handlingChoice,
 	item,
+	location,
 	visitUrl,
 	runChoice,
 	print,
@@ -29,18 +31,28 @@ const steps = {
 		cliExecute("use 1 diabolic pizza cube");
 		cliExecute("/whitelist Old CW's Germ Free Clan");
 	
-		
-	setProperty("_kdcs_next_step", "postAscension");
-		printHtml(`
-		<br>
-			-------------------------------
-			ASCEND Normal Community Service
-			Blender, Pastamancer, Astral Trousers, Astral Pilsners
-			--------------------------------
-		<br>
-			Then run:
-		kdcs postAscension
-		`);
+	if (availableAmount(Item.get("snow suit")) < 1) {
+			throw 'No snow suit - try later';
+	}
+	
+	if (!userConfirm('Do you want to acend?')) {
+			throw 'Aborting before ascending';
+		}
+	
+	// ascend
+	visitUrl(`ascend.php?action=ascend&confirm=on&confirm2=on`);
+	
+	// go through the pearly gates
+	visitUrl("afterlife.php?action=pearlygates");
+	
+	// get astral six-pack
+	visitUrl(`afterlife.php?action=buydeli&whichitem=5046`);
+	
+	// get astral trousers
+	visitUrl(`afterlife.php?action=buyarmory&whichitem=5035`);
+	
+	// Normal Community Service, Male, Blender, Pastamancer
+	visitUrl(`afterlife.php?action=ascend&confirmascend=1&whichsign=8&gender=1&whichclass=3&whichpath=25&asctype=2&nopetok=1&noskillsok=1&pwd`, true);
 	},
 
 	postAscension: function() {
@@ -99,18 +111,16 @@ const steps = {
 		visitUrl('clan_viplounge.php?action=fwshop');	
 
 		// let's get our pulls for today
-
 		cliExecute("buy using storage 1 borrowed time");
 		cliExecute("buy using storage 1 1952 Mickey Mantle card");
 		cliExecute("buy using storage 1 non-Euclidean angle");
-
 		cliExecute("pull 1 snow suit");
 		cliExecute("pull 1 borrowed time");
 		cliExecute("pull 1 non-Euclidean angle");
 		cliExecute("pull 1 1952 Mickey Mantle card");
 		cliExecute("Pull 1 staff of simmering hatred");
 		
-		/// grab a yeg's motel toothbrush for later 
+		// grab a yeg's motel toothbrush for later 
 		cliExecute("cargo 284");
 
 		// run breakfast to get clan stuff, batteries, wishes etc. 
@@ -118,22 +128,26 @@ const steps = {
 		
 		// run detective solver script to get some cop dollars
 		cliExecute("detective solver");
-
-		cliExecute("retrocape mysticality thrill");
 		
-		cliExecute("maximize mys, equip garbage shirt, equip familiar scrapbook, equip fourth of may")
-		
-		cliExecute("equip acc1 lil doctor");
-		cliExecute("equip acc2 eight days a week pill keeper");
-		cliExecute("equip acc3 hewn moon-rune spoon");
-		
-
+		// miscellaneous item setup stuff
 		cliExecute("use 1 borrowed time");
 		cliExecute("use 1 bird-a-day calendar");
 		cliExecute("use 1 astral six-pack");
 		cliExecute("boombox meat");
 		cliExecute("autosell Newbiesport Tent");
 		cliExecute("create fish hatchet");
+		
+		// initial adventuring gear
+		cliExecute("equip hat ravioli hat");
+		cliExecute("equip weapon fourth of may");
+		cliExecute("equip off-hand unbreakable umbrella");
+		cliExecute("retrocape mysticality thrill");
+		cliExecute("fold garbage shirt");
+		cliExecute("equip shirt garbage shirt");
+		cliExecute("equip cargo cultist shorts");
+		cliExecute("equip acc1 lil doctor");
+		cliExecute("equip acc2 eight days a week pill keeper");
+		cliExecute("equip acc3 hewn moon-rune spoon");
 		cliExecute("familiar plastic pirate skull");
 		cliExecute("equip miniature crystal ball");
 
@@ -165,8 +179,8 @@ const steps = {
 		// sell the stuff we don't need to ensure we have funds for buying stuff
 		autosell(availableAmount(Item.get("lemon")), Item.get("lemon"));
 		autosell(availableAmount(Item.get("strawberry")), Item.get("strawberry"));
-		autosell(availableAmount(Item.get("orange")), Item.get("orange"));
-		autosell(availableAmount(Item.get("coconut shell")-1), Item.get("coconut shell"));
+		autosell(availableAmount(Item.get("orange")), Item.get("orange"));	
+		autosell(availableAmount(Item.get("coconut shell"))-1, Item.get("coconut shell"));
 		autosell(availableAmount(Item.get("eggbeater")), Item.get("eggbeater"));
 		autosell(availableAmount(Item.get("corn holder")), Item.get("corn holder"));
 
@@ -190,13 +204,15 @@ const steps = {
 		visitUrl("choice.php?whichchoice=1089&option=11");
 		
 		setProperty("_kdcs_next_step", "buffs");
+		
+		printHtml(`
+		Next step: 
+		kdcs buffs`);
 
 	},
 	
 	buffs: function() {
 						
-		cliExecute("familiar hovering sombrero");
-		cliExecute("equip miniature crystal ball");
 		cliExecute("equip off-hand familiar scrapbook");
 
 		// here's all our replaceable buffs
@@ -227,7 +243,7 @@ const steps = {
 		cliExecute("Use 1 ointment of the occult ");
 		cliExecute("Use 1 tomato juice of powerful power");
 		cliExecute("pool aggressive");
-		cliExecute("swim laps");
+
 		
 		// non replaceable buffs and +exp stuff ahead of getting stats
 		cliExecute("beach head 10");
@@ -240,35 +256,39 @@ const steps = {
 		cliExecute("telescope look high");
 		cliExecute("monorail");
 		cliExecute("use 1 votive of confidence");
-		
 		cliExecute("Bastille Myst");
 		cliExecute("use 1 a ten-percent bonus");
 
-		// make and eat your MALlowed out pizza for +500% stats
-		visitUrl("campground.php?action=makepizza&pizza=1008,2841,635,8404");
-		cliExecute("eat 1 diabolic pizza");
+
 
 		// Scavenge at daycare
 		visitUrl("place.php?whichplace=town_wrong&action=townwrong_boxingdaycare");
 		runChoice(3);
 		runChoice(2);
-
-		cliExecute("maximize mys, equip garbage shirt, equip fourth of may")
-		cliExecute("equip off-hand familiar scrapbook");
+		
+		// get back into fighting gear
+		cliExecute("equip hat coconut shell");
+		cliExecute("equip weapon fourth of may");
+		cliExecute("equip off-hand unbreakable umbrella");
+		cliExecute("retrocape mysticality thrill");
+		cliExecute("fold garbage shirt");
+		cliExecute("equip shirt garbage shirt");
+		cliExecute("equip cargo cultist shorts");
+		cliExecute("familiar plastic pirate skull");
+		cliExecute("equip miniature crystal ball");
 		cliExecute("equip acc1 hewn moon-rune spoon");
 		cliExecute("equip acc2 draftsman");
 		cliExecute("equip acc3 backup camera");
 		
-		cliExecute("maximize mys, equip garbage shirt, equip fourth of may, equip draftsman, equip backup camera");
+		cliExecute("familiar hovering sombrero");
+		cliExecute("equip miniature crystal ball");
 		
 		cliExecute("backupcamera ml");
-		
-		cliExecute("mood cs");
-		cliExecute("soak");
 
-		// let's fight a witchess witch for stats and a battle broom
-		cliExecute("/aa CS_WitchessWitch");
-		cliExecute("reminisce witchess witch");
+		cliExecute("soak");
+		
+		cliExecute("create 1 magical sausage");
+		cliExecute("eat 1 magical sausage");
 		
 		cliExecute("/aa CS_Kills");
 		
@@ -278,12 +298,35 @@ const steps = {
 		runChoice(2);
 		cliExecute("Use 1 free-range mushroom");
 		
+		if (!userConfirm('About to fight Witchess Witch. Continue?')) {
+			throw 'Aborting before Witchess';
+		}
 		
-		cliExecute("equip acc1 lil doctor bag");
+		// let's fight a witchess witch for stats and a battle broom
+		
+		cliExecute("equip off-hand fish hatchet");
+		cliExecute("equip acc1 powerful glove");
+		cliExecute("backupcamera init");
+		cliExecute("/aa CS_WitchessWitch");
+		cliExecute("reminisce witchess witch");
+		
+		if (availableAmount(Item.get("battle broom")) < 1) {
+			throw 'Looks like we got beaten up!';
+		}	
+	
+		// re-equip stuff
+		cliExecute("equip unbreakable umbrella");
+		cliExecute("equip acc1 hewn moon-rune spoon");
+	
+		// add your ML buffs
+		cliExecute("swim laps");
+		cliExecute("mood cs");
+		
+		// make and eat your MALlowed out pizza for +500% stats
+		visitUrl("campground.php?action=makepizza&pizza=1008,2841,635,8404");
+		cliExecute("eat 1 diabolic pizza");	
+
 		cliExecute("equip acc3 battle broom");
-		
-		cliExecute("create 1 magical sausage");
-		cliExecute("eat 1 magical sausage");
 	
 		setProperty("_kdcs_next_step", "levelling");
 		
@@ -294,12 +337,13 @@ const steps = {
 	
 		
 	levelling: function() {			
+	
 		
 		// NEP levelling
 		
 		// Visit the party and reject the quest
-		visitUrl("adventure.php?snarfblat=528");
-		runChoice(2);
+		setProperty("choiceAdventure1322",2);
+		adv1(Location.get("the neverending party"));
 		
 		
 		// first stage - do some banishes
@@ -307,63 +351,63 @@ const steps = {
 		cliExecute("/aa NEP_Banishes");
 		
 		// first five banishes (Reflex Hammer, Feel Hatred)
-		visitUrl("adventure.php?snarfblat=528");
-		visitUrl("adventure.php?snarfblat=528");
-		visitUrl("adventure.php?snarfblat=528");
-		visitUrl("adventure.php?snarfblat=528");
-		visitUrl("adventure.php?snarfblat=528");
+		adv1(Location.get("the neverending party"));	// 1
+		adv1(Location.get("the neverending party"));	// 2
+		adv1(Location.get("the neverending party"));	// 3
+		adv1(Location.get("the neverending party"));	// 4
+		adv1(Location.get("the neverending party"));	// 5
 		
-		// bowl sideways before next banish 
+		// bowl sideways before next banish (will attack if no bowl sideways available)
 		cliExecute("/aa NEP_BowlBanish");
-		visitUrl("adventure.php?snarfblat=528");
+		adv1(Location.get("the neverending party"));	// 6
 		
 		// put the spoon back on & fight a sausage goblin
 		cliExecute("equip acc1 hewn moon-rune spoon");
 		cliExecute("equip off-hand Kramco Sausage-o-Matic");
-		cliExecute("/aa CS_Kills");
-		visitUrl("adventure.php?snarfblat=528");
+		adv1(Location.get("the neverending party"));	// 7
 		
-		// put the familiar scrapbook on for more exp
-		cliExecute("equip off-hand familiar scrapbook");
+		// put the unbreakable umbrella on for more exp
+		cliExecute("equip off-hand unbreakable umbrella");
 		
 		// this should be the NC, get Tomes of Opportunity
-		visitUrl("adventure.php?snarfblat=528");
-		runChoice(1);
-		runChoice(2);
+		setProperty("choiceAdventure1324",1);
+		setProperty("choiceAdventure1325",2);
+		adv1(Location.get("the neverending party"));	// 8
 		
+		// set the choice to fight a random partier next time
+		setProperty("choiceAdventure1324",5);
+
 		// do a few regular kills with bowl sideways active
-		visitUrl("adventure.php?snarfblat=528");
-		visitUrl("adventure.php?snarfblat=528");
-		visitUrl("adventure.php?snarfblat=528");
+		adv1(Location.get("the neverending party"));	// 9
+		adv1(Location.get("the neverending party"));	// 10
+		adv1(Location.get("the neverending party"));	// 11
 		
-		// bowling ball comes back, so we bowl and banish again
-		cliExecute("/aa NEP_BowlBanish");
-		visitUrl("adventure.php?snarfblat=528");
-		
+		// bowl sideways should happen here
+		adv1(Location.get("the neverending party"));	// 12
 
 		// back to regular kills with bowl sideways active
 		cliExecute("/aa CS_Kills");
-		visitUrl("adventure.php?snarfblat=528");
-		visitUrl("adventure.php?snarfblat=528");
-		visitUrl("adventure.php?snarfblat=528");
+		adv1(Location.get("the neverending party"));	// 13
+		adv1(Location.get("the neverending party"));	// 14
+		adv1(Location.get("the neverending party"));	// 15
 		
-		// the NC should be up again
-		visitUrl("adventure.php?snarfblat=528");
-		runChoice(5);
-		
-		// bowl sideways is running out so do your feel prides
+		// time to feel real proud of ourselves
 		cliExecute("/aa NEP_PrideKills");
-		visitUrl("adventure.php?snarfblat=528");
-		visitUrl("adventure.php?snarfblat=528");
-		visitUrl("adventure.php?snarfblat=528");
+		
+		// the NC should be up again, fighting a random partier
+		adv1(Location.get("the neverending party"));	// 16
+		adv1(Location.get("the neverending party"));	// 17
+		adv1(Location.get("the neverending party"));	// 18
+		adv1(Location.get("the neverending party"));	// 19
 		
 		// bowl sideways has run out and so have free NEP fights so do your free kills 
 		cliExecute("/aa NEP_FreeKills");
-		visitUrl("adventure.php?snarfblat=528");
-		visitUrl("adventure.php?snarfblat=528");
-		visitUrl("adventure.php?snarfblat=528");
-		visitUrl("adventure.php?snarfblat=528");
+		adv1(Location.get("the neverending party"));	// 20
+		adv1(Location.get("the neverending party"));	// 21
+		adv1(Location.get("the neverending party"));	// 22
+		adv1(Location.get("the neverending party"));	// 23
 		cliExecute("/aa disabled");
+
 
 	setProperty("_kdcs_next_step", "mox");
 		
@@ -512,6 +556,7 @@ const steps = {
 		cliExecute("Cast 1 Feel Lonely");
 		cliExecute("Cast 1 The Sonata of Sneakiness");
 		cliExecute("Cast 1 Smooth Movement");
+		cliExecute("Cast 1 seek out a bird");
 		cliExecute("use 1 shady shades");
 		cliExecute("maximize -combat");
 		cliExecute("genie effect disquiet riot");
@@ -539,6 +584,7 @@ const steps = {
 		cliExecute("maximize familiar weight");
 		cliExecute("cast 1 empathy of the newt");
 		cliExecute("use 1 silver face paint ");
+		cliExecute("cast 1 blood bond");
 
 	// go shower/saber a crate
 	cliExecute("equip fourth of may cosplay saber");
@@ -689,31 +735,12 @@ const steps = {
 		visitUrl("council.php");
 		visitUrl("choice.php?whichchoice=1089&option=9");
 		
-		if (!userConfirm('Donate your body to science?')) {
+		if (!userConfirm('Donate your body to science and do post-run stuff?')) {
 		throw 'Aborting before Final Service.';
 	}
 		visitUrl("council.php");
 		visitUrl("choice.php?whichchoice=1089&option=30");
 
-	setProperty("_kdcs_next_step", "postRun");
-		
-		printHtml(`
-		<br>
-		// do item test (1)
-		<br>
-		// final service
-		<br>
-		Then run:
-		kdcs postRun`);
-	},
-
-	/*
-	-----------------------
-	| Post-Run Stuff
-	-----------------------
-	*/
-	
-	postRun: function() {
 		cliExecute("/aa disabled");
 		cliExecute("/whitelist Alliance From Heck");
 		cliExecute("unequip snow suit");
