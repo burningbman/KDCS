@@ -196,10 +196,6 @@ const steps = {
 		cliExecute("cast 1 eye and a twist");
 		cliExecute("maximize MP");
 		
-
-	if (!userConfirm('About to coil wire. Continue?')) {
-		throw 'Aborting before coiling wire';
-	}
 		visitUrl("council.php");
 		visitUrl("choice.php?whichchoice=1089&option=11");
 		
@@ -209,9 +205,12 @@ const steps = {
 		Next step: 
 		kdcs buffs`);
 
+		/* 
 	},
 	
 	buffs: function() {
+		
+		*/
 						
 		cliExecute("equip off-hand familiar scrapbook");
 
@@ -259,8 +258,6 @@ const steps = {
 		cliExecute("Bastille Myst");
 		cliExecute("use 1 a ten-percent bonus");
 
-
-
 		// Scavenge at daycare
 		visitUrl("place.php?whichplace=town_wrong&action=townwrong_boxingdaycare");
 		runChoice(3);
@@ -297,11 +294,7 @@ const steps = {
 		visitUrl("adventure.php?snarfblat=543");
 		runChoice(2);
 		cliExecute("Use 1 free-range mushroom");
-		
-		if (!userConfirm('About to fight Witchess Witch. Continue?')) {
-			throw 'Aborting before Witchess';
-		}
-		
+
 		// let's fight a witchess witch for stats and a battle broom
 		
 		cliExecute("equip off-hand fish hatchet");
@@ -340,6 +333,9 @@ const steps = {
 	
 		
 		// NEP levelling
+		
+		// set your auto recovery 
+		setProperty('hpAutoRecovery', '0.5');
 		
 		// Visit the party and reject the quest
 		setProperty("choiceAdventure1322",2);
@@ -699,6 +695,8 @@ const steps = {
 		Then run:
 		kdcs item`);
 	},
+	
+
 	item: function() {
 		cliExecute("soak");
 		cliExecute("hermit clover");
