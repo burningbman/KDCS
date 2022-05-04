@@ -35,9 +35,6 @@ const steps = {
 				throw 'No snow suit - try later';
 		}
 		
-		if (!userConfirm('Do you want to acend?')) {
-				throw 'Aborting before ascending';
-			}
 		
 		// ascend
 		visitUrl(`ascend.php?action=ascend&confirm=on&confirm2=on`);
@@ -386,18 +383,12 @@ const steps = {
 
 		cliExecute("maximize mox");
 		
-		if (!userConfirm('About to run Moxie test. Continue?')) {
-		throw 'Aborting before doing Moxie test.';
-	}
 		visitUrl("council.php");
 		visitUrl("choice.php?whichchoice=1089&option=4");
 		
 		// mus test 
 		cliExecute("maximize mus");
 
-		if (!userConfirm('About to run Muscle test. Continue?')) {
-		throw 'Aborting before doing Muscle test.';
-	}
 		visitUrl("council.php");
 		visitUrl("choice.php?whichchoice=1089&option=2");
 
@@ -406,9 +397,6 @@ const steps = {
 		// hp test
 		cliExecute("maximize hp");
 		
-		if (!userConfirm('About to run HP test. Continue?')) {
-		throw 'Aborting before doing HP test.';
-	}
 		visitUrl("council.php");
 		visitUrl("choice.php?whichchoice=1089&option=1");
 
@@ -416,9 +404,6 @@ const steps = {
 		// mys test 
 		cliExecute("maximize mys");
 		
-		if (!userConfirm('About to run Mysticality test. Continue?')) {
-		throw 'Aborting before doing Mysticality test.';
-	}
 		visitUrl("council.php");
 		visitUrl("choice.php?whichchoice=1089&option=3");
 
@@ -448,9 +433,6 @@ const steps = {
 		cliExecute("beach head 1");
 		cliExecute("maximize hot res");
 		
-		if (!userConfirm('About to do Hot Resistance test. Continue?')) {
-		throw 'Aborting before Hot Resistance test.';
-	}
 		visitUrl("council.php");
 		visitUrl("choice.php?whichchoice=1089&option=10");
 
@@ -470,9 +452,6 @@ const steps = {
 		cliExecute("maximize -combat");
 		cliExecute("genie effect disquiet riot");
 		
-		if (!userConfirm('About to do Non Combat test. Continue?')) {
-		throw 'Aborting before Non Combat test.';
-	}
 		visitUrl("council.php");
 		visitUrl("choice.php?whichchoice=1089&option=8");
 
@@ -486,16 +465,13 @@ const steps = {
 		cliExecute("use 1 silver face paint ");
 		cliExecute("cast 1 blood bond");
 
-	// go shower/saber a crate
-	cliExecute("equip fourth of may cosplay saber");
-	setProperty("choiceAdventure1387",2);
-	cliExecute("/aa CS_ShowerSaber");
-	visitUrl("adventure.php?snarfblat=240");
-	if (handlingChoice()) runChoice(-1);
+		// go shower/saber a crate
+		cliExecute("equip fourth of may cosplay saber");
+		setProperty("choiceAdventure1387",2);
+		cliExecute("/aa CS_ShowerSaber");
+		visitUrl("adventure.php?snarfblat=240");
+		if (handlingChoice()) runChoice(-1);
 	
-	if (!userConfirm('About to do Familiar Weight test. Continue?')) {
-		throw 'Aborting before Familiar Weight test.';
-	}
 		visitUrl("council.php");
 		visitUrl("choice.php?whichchoice=1089&option=5");
 
@@ -536,9 +512,6 @@ const steps = {
 		cliExecute("pool aggressive");
 		cliExecute("cast 1 bow-legged swagger");
 		
-		if (!userConfirm('About to do Weapon Damage test. Continue?')) {
-		throw 'Aborting before Weapon Damage test.';
-	}
 		visitUrl("council.php");
 		visitUrl("choice.php?whichchoice=1089&option=6");
 
@@ -546,12 +519,12 @@ const steps = {
 		
 		cliExecute("Cast 1 simmer");
 		
-	// go shower/saber a crate
-	cliExecute("equip fourth of may cosplay saber");
-	setProperty("choiceAdventure1387",2);
-	cliExecute("/aa CS_ShowerSaber");
-	visitUrl("adventure.php?snarfblat=240");
-	if (handlingChoice()) runChoice(-1);
+		// go shower/saber a crate
+		cliExecute("equip fourth of may cosplay saber");
+		setProperty("choiceAdventure1387",2);
+		cliExecute("/aa CS_ShowerSaber");
+		visitUrl("adventure.php?snarfblat=240");
+		if (handlingChoice()) runChoice(-1);
 		
 		cliExecute("cast 1 song of sauce");
 		cliExecute("cast 1 carol of the hells");
@@ -561,11 +534,6 @@ const steps = {
 		cliExecute("beach head 7");
 		cliExecute("maximize spell damage");
 
-
-		if (!userConfirm('About to do Spell Damage test. Continue?')) {
-		throw 'Aborting before Spell Damage test.';
-	}
-	
 		visitUrl("council.php");
 		visitUrl("choice.php?whichchoice=1089&option=7");	
 		
@@ -603,15 +571,9 @@ const steps = {
 		cliExecute("use 1 bag of grain");
 		// cliExecute("genie effect frosty");
 		
-		if (!userConfirm('About to do Item Drop test. Continue?')) {
-		throw 'Aborting before Item Drop test.';
-	}
 		visitUrl("council.php");
 		visitUrl("choice.php?whichchoice=1089&option=9");
 		
-		if (!userConfirm('Donate your body to science and do post-run stuff?')) {
-		throw 'Aborting before Final Service.';
-	}
 		visitUrl("council.php");
 		visitUrl("choice.php?whichchoice=1089&option=30");
 
